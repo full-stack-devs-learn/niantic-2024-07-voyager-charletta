@@ -51,18 +51,21 @@ public class Main
         // Variable name: name
         // Data Type: string (names/words are strings)
 
+            String name= "Charletta";
 
 
         // 2. Declare a variable to hold your age.
         // Variable name: age
         // Data Type: int (age is a whole number)
 
+             int age= 36;
 
 
         // 3. Declare a variable that holds the first 5 digits of PI.
         // Variable name: pi
         // Data Type: double (pi is a number with decimal places)
 
+             double pi= 3.1415;
 
 
         // 4. Declare a variable holds the price of
@@ -72,6 +75,8 @@ public class Main
 
         // NOTE: the decimal data type  is not automatically recognized
         // see lecture notes
+
+             double price= 19.99;
     }
 
     public static void section02()
@@ -95,6 +100,8 @@ public class Main
         // 5. Declare a variable to store the name of your
         // favorite super hero.
 
+            String name ="Black Panther";
+
         // Hint: You cannot use the same variable name
         // as a variable that you have used before.
 
@@ -105,13 +112,15 @@ public class Main
         // questions and each question is worth 1 point.
         // (You can choose the score)
 
+            int score= 99;
+
 
 
         // 7. Declare a variable that holds the current
         // population in the United States.
         // (search what the population is today)
 
-
+            int USpopulation= '330,000,000';
 
         // 8. Declare a variable that holds the current
         // population in China.
@@ -123,21 +132,25 @@ public class Main
         // population in the world.
         // (search what the population is today)
 
-
+            long worldpopulation ='(8100000000)L'
 
         // 10. Declare a variable that specifies whether
         // or not your mouse is wireless.
 
-
+            boolean ismousewireless= "false";
 
         // 11. Search what the Latitude and Longitude of your
         // home town are. Then declare 2 variables
         // to store the Latitude and Longitude.
 
+            double latitude= 37.8044;
+            double longitude= 122.2712;
 
 
         // 12. Create a variable that holds the current
         // Microsoft stock price.
+
+            double microsoftcorp= 444.85;
     }
     
     public static void section03()
@@ -174,6 +187,7 @@ public class Main
         // but missed 3 of his shots.
 
         // How many shots did Pete take?
+
 
 
 
