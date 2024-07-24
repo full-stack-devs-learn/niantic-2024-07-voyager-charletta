@@ -120,31 +120,31 @@ public class Main
         // population in the United States.
         // (search what the population is today)
 
-            int USpopulation= '330,000,000';
+            int USpopulation= (330000000);
 
         // 8. Declare a variable that holds the current
         // population in China.
         // (search what the population is today)
 
-
+            long chinapopulation= (142000000000L);
 
         // 9. Declare a variable that holds the current
         // population in the world.
         // (search what the population is today)
 
-            long worldpopulation ='(8100000000)L'
+            long worldpopulation = (8100000000L);
 
         // 10. Declare a variable that specifies whether
         // or not your mouse is wireless.
 
-            boolean ismousewireless= "false";
+            boolean isyourmousewireless (=="false");
 
         // 11. Search what the Latitude and Longitude of your
         // home town are. Then declare 2 variables
         // to store the Latitude and Longitude.
 
-            double latitude= 37.8044;
-            double longitude= 122.2712;
+            double Latitude= 37.8044;
+            double Longitude= 122.2712;
 
 
         // 12. Create a variable that holds the current
@@ -186,7 +186,12 @@ public class Main
         // 13. In his last basketball game Pete made 7 shots,
         // but missed 3 of his shots.
 
+
         // How many shots did Pete take?
+
+           int ShotsMade=7;
+           int ShotsMissed=3;
+           int totalShots =10;
 
 
 
