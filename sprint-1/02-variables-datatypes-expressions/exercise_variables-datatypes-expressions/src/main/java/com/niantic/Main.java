@@ -191,7 +191,7 @@ public class Main
 
            int ShotsMade=7;
            int ShotsMissed=3;
-           int totalShots =10;
+           int totalShots = ShotsMade + ShotsMissed=10;
 
 
 

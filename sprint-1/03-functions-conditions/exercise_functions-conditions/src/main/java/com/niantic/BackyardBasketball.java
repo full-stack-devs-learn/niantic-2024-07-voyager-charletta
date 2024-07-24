@@ -24,8 +24,19 @@ public class BackyardBasketball
      */
     public int calculateWinningPercentage(int gamesWon, int gamesLost)
     {
-        return 0;
+        // calculate the total number of games
+        int totalGames= gamesWon+ gamesLost;
+
+        // calculate the winning percentage
+        double winningPercent= (double)gamesWon/totalGames;
+        winningPercent= winningPercent * 100;
+
+        // return the winning percentage
+        return (int)winningPercent;
     }
+
+
+
 
 
     /*
@@ -43,7 +54,17 @@ public class BackyardBasketball
      */
     public int calculatePointsScored(int shotPercentage, int shotsTaken, boolean isThree)
     {
-        return 0;
+        // calculate how many shots they made
+        double percent = shotPercentage / 100.0;
+        double shotsMade = shotsTaken * percent;
+
+        if(isThree == true) {
+            return (int) shotsMade *3;
+        }
+        else {
+            return (int) shotsMade *2;
+        }
+
     }
 
 
@@ -69,6 +90,23 @@ public class BackyardBasketball
      */
     public int calculateShotsRequired(int shotPercentage, int desiredScore, boolean isThree)
     {
-        return 0;
+        //calculate the minimum number of shots
+
+        int shotsRequired;
+        int pointsPerShot;
+        double accuracy = (double)shotPercentage/100;
+
+        //Determine point-per shot value:
+
+        if(isThree == true) {
+            pointsPerShot =3;
+        }
+        else {
+            pointsPerShot =2;
+        }
+
+
+        //calculate how many shots are necessary
+        return shotsRequired=(int)((double)desiredScore / (double)pointsPerShot/accuracy);
     }
 }
