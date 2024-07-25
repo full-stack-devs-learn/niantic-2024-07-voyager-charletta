@@ -24,7 +24,7 @@ public class ClairesCookies
         private final double TAX_Rate=.575
         private final double PRICE_PER_DOZEN=12.95
 
-                
+
 
 
 
