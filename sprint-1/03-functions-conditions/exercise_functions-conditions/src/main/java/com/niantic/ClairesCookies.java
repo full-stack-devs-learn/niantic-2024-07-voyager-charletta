@@ -2,8 +2,6 @@ package com.niantic;
 
 public class ClairesCookies
 {
-    @SuppressWarnings("unused") 
-    private final double TaxRate = .0575;
 
     /*
      * Claire's cookies cost $12.95 a dozen.
@@ -21,12 +19,17 @@ public class ClairesCookies
      */
     public double calculateSubtotal(int quantity)
     {
+        //calculate the price of an order before tax
+
+        private final double TAX_Rate=.575
+        private final double PRICE_PER_DOZEN=12.95
+
+                
 
 
 
 
-
-        return 0;
+        return quantity* PRICE_PER_DOZEN;
     }
 
     /*
