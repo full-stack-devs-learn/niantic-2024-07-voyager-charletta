@@ -37,8 +37,6 @@ public class BackyardBasketball
 
 
 
-
-
     /*
      * The calculatePointsScored function should calculate
      * the number of points a player scored in a game.

@@ -12,7 +12,7 @@ public class ClairesCookies
      * of how many dozen cookies they want to order.
      *
      * This calculateSubtotal function should calculate
-     * the price of an order before the cost of tax
+     * the price of an order after the cost of tax
      * is added.
      *
      * calculateSubtotal(1) -> 12.95
@@ -21,6 +21,11 @@ public class ClairesCookies
      */
     public double calculateSubtotal(int quantity)
     {
+
+
+
+
+
         return 0;
     }
 
