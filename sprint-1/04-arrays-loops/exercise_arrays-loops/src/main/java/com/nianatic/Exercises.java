@@ -103,11 +103,20 @@ public class Exercises
      */
     public String firstDayOfWeek(String[] daysOfTheWeek)
     {
+        String[] firstDayOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+        System.out.println("First day of week: " + daysOfTheWeek[0]);
 
 
 
 
-        return null;
+
+
+
+
+
+
+        return daysOfTheWeek [0];
     }
 
     /*
@@ -129,7 +138,13 @@ public class Exercises
      */
     public String lastDayOfWeek(String[] daysOfTheWeek)
     {
-        return null;
+
+        String[] lastDayOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"};
+
+        System.out.println("Last Day Of Week: " + daysOfTheWeek[-1]);
+
+
+        return lastDayOfWeek[-1];
     }
 
     /*
