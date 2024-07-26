@@ -1,5 +1,8 @@
 package com.nianatic;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Exercises
 {
     /*
@@ -11,7 +14,11 @@ public class Exercises
      */
     public String[] daysOfTheWeek()
     {
-        return null;
+         //create an array to hold 7 strings of the week
+
+        String [] daysOfTheWeek= {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+        return daysOfTheWeek;
     }
 
     /*
@@ -23,7 +30,8 @@ public class Exercises
      */
     public String[] monthsOfTheYear()
     {
-        return null;
+        String[] monthsOfTheYear= {"January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        return monthsOfTheYear;
     }
 
     /*
@@ -38,7 +46,16 @@ public class Exercises
      */
     public int[] oneToFifty()
     {
-        return null;
+        //creates an array to store numbers 1-50
+
+        int[] oneToFifty=new int[50];
+
+        for (int i = 0; i<50; i++){
+            oneToFifty[i]=i+1;
+        }
+
+
+        return oneToFifty;
     }
 
     /*
@@ -53,7 +70,18 @@ public class Exercises
      */
     public int[] evenNumbers()
     {
-        return null;
+        int[] evenNumbers=new int[100];
+
+        for (int i = 0; i< 100; i++) {
+            evenNumbers[i]=(i+1) *2;
+
+
+        }
+
+
+
+
+        return evenNumbers;
     }
 
     /*
@@ -75,6 +103,10 @@ public class Exercises
      */
     public String firstDayOfWeek(String[] daysOfTheWeek)
     {
+
+
+
+
         return null;
     }
 
