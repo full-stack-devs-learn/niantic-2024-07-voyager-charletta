@@ -110,12 +110,6 @@ public class Exercises
 
 
 
-
-
-
-
-
-
         return daysOfTheWeek [0];
     }
 
@@ -139,12 +133,12 @@ public class Exercises
     public String lastDayOfWeek(String[] daysOfTheWeek)
     {
 
-        String[] lastDayOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"};
-
-        System.out.println("Last Day Of Week: " + daysOfTheWeek[-1]);
+        String lastDayOfWeek = daysOfTheWeek[daysOfTheWeek.length -1];
 
 
-        return lastDayOfWeek[-1];
+
+
+        return daysOfTheWeek[daysOfTheWeek.length -1];
     }
 
     /*
@@ -163,7 +157,11 @@ public class Exercises
      */
     public String monthName(String[] months, int monthNumber)
     {
-        return null;
+
+
+
+
+        return months[monthNumber -1];
     }
 
     /*
@@ -185,7 +183,11 @@ public class Exercises
      */
     public boolean hasName(String[] names, String nameToFind)
     {
-        return false;
+
+
+
+
+
     }
 
     /*

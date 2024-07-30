@@ -186,6 +186,29 @@ public class Exercises
      */
     public String createUserName(String fullName)
     {
-        return null;
+        // 1. it must be lowercase
+        String lowerCaseFullName = fullName.strip().toLowerCase();
+
+        // 2. remove suffix (anything after the comma)
+        String[] fullNameParts = lowerCaseFullName.split(" " );
+        String nameOnly;
+
+        //  3. middle names should only use the first letter
+        //  4.
+
+
+
+
+
+
+
+        return fullName;
     }
+
+
+
+
+
+
+
 }
