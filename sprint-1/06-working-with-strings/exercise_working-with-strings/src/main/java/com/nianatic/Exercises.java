@@ -1,5 +1,7 @@
 package com.nianatic;
 
+import java.util.Locale;
+
 public class Exercises
 {
     /*
@@ -18,7 +20,21 @@ public class Exercises
      */
     public String changeCase(String word, boolean toUpperCase)
     {
-        return null;
+
+        if (toUpperCase) {
+            return word.toUpperCase();
+        }else
+
+        {
+
+
+        }
+
+    {
+
+
+
+
     }
 
     /*
@@ -47,8 +63,12 @@ public class Exercises
      * createHtml("Bold text", "strong") => <strong>Bold text</strong>
      *
      */
-    public String createHtml(String content, String elementName)
+
+        public String createHtml(String content, String elementName)
     {
+
+
+    }
         return null;
     }
 
