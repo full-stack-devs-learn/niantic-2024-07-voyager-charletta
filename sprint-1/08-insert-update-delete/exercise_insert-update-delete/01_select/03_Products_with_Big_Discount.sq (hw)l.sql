@@ -13,5 +13,26 @@ USE northwind;
 
 -- Expected: 8 Rows
 
-SELECT 
+	SELECT
+		 company_name
+         order_date,
+		 order_id,
+         product_name,
+		 sales_price,
+		 quantity,
+		 discount,
+	     (sales_price * quantity) *( 1- Discount) AS LineTotal 
+	
+    FROM 
+       customer_orders
+	
+    WHERE (sales_price * quantity) * discount > 1000
+	
+    ORDER BY 
+          discount DESC; 
+    
+    
+  
+  
+  
     
