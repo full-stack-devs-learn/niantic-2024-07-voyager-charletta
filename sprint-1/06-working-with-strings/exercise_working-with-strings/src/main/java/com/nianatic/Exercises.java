@@ -23,14 +23,9 @@ public class Exercises
 
         if (toUpperCase) {
             return word.toUpperCase();
-        }else
-
-        {
-
-
+        }else {
+            return word.toLowerCase();
         }
-
-    {
 
 
 
@@ -66,10 +61,17 @@ public class Exercises
 
         public String createHtml(String content, String elementName)
     {
+        String htmlString;
+        htmlString = "<";
+        htmlString = htmlString + elementName;
+        htmlString = htmlString + ">";
+        htmlString = htmlString + content;
+        htmlString = htmlString + "</";
+        htmlString = htmlString + elementName;
+        htmlString = htmlString + ">";
 
 
-    }
-        return null;
+        return htmlString;
     }
 
     /*
@@ -91,7 +93,10 @@ public class Exercises
      */
     public String moreHtml(String content, String elementName)
     {
-        return null;
+
+
+
+        return
     }
 
     /*
