@@ -1,3 +1,4 @@
+package com.niantic.part_2_objects;
 
 public class MathTest {
     private int score;
@@ -49,5 +50,6 @@ public class MathTest {
         return (score * 100) / possiblePoints;
     }
 }
+
 
 
