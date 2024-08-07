@@ -11,9 +11,9 @@ public class Rectangle
 
     }
 
-    public Rectangle( int width, int height ); {
-        this.width=
-        this.height=
+    public Rectangle( int width, int height ) {
+        this.width=width;
+        this.height= height;
 
     }
 
@@ -21,17 +21,20 @@ public class Rectangle
         return width;
 
     }
-    public void setWidth(){
+    public void setWidth(int width){
         this.width= width;
     }
 
    public int getHeight(){
          return height;
    }
-   public int getArea(){
-
+   public void setHeight(int height){
+         this.height= height;
+   }
+   public int getArea() {
+        return height * width;
    }
 
-}
 
+}
 

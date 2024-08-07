@@ -10,10 +10,21 @@ public class ArrayListIntro
 
     Return the list.
      */
-    public ArrayList<String> getHeroesList()
-    {
-        return null;
+    public ArrayList<String> getHeroesList(){
+
+        ArrayList<String> heroes = new ArrayList<String>();
+
+        heroes.add("Thor");
+        heroes.add("Madame Webb");
+        heroes.add("Iron Man");
+        heroes.add("Black Widow");
+        heroes.add("Black Panther");
+
+      return heroes;
     }
+
+
+
 
     /*
     2. Given a list of integers, create and return a new list of just the
@@ -24,7 +35,16 @@ public class ArrayListIntro
      */
     public ArrayList<Integer> findEvens(ArrayList<Integer> numbers)
     {
-        return null;
+       ArrayList <Integer> evennumbers= new ArrayList<>();
+       for (int number: numbers){
+           if(number % 2 ==0){
+               evennumbers.add(number);
+
+           }
+       }
+
+
+        return evennumbers;
     }
 
     /*
