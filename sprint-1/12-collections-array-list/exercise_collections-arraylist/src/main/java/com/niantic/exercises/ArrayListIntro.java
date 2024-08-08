@@ -142,8 +142,26 @@ public class ArrayListIntro
 
         Include as many numbers as is specified by the size input
      */
-    public ArrayList<Integer> buildFibonacci(int size)
-    {
-        return null;
+    public ArrayList<Integer> buildFibonacci(int size) {
+
+        ArrayList<Integer> buildFibonacci = new ArrayList<>();
+
+        if (size <= 0) {
+            return buildFibonacci;
+        }
+
+        buildFibonacci.add(0);
+        if (size > 1) {
+            buildFibonacci.add(1);
+        }
+
+        while (buildFibonacci.size() < size) {
+            int sizeOfList = buildFibonacci.size();
+            int nextValue = buildFibonacci.get(sizeOfList - 1) + buildFibonacci.get(sizeOfList - 2);
+            buildFibonacci.add(nextValue);
+        }
+
+        return buildFibonacci;
     }
+
 }
