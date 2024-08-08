@@ -55,7 +55,17 @@ public class ArrayListIntro
      */
     public int sum(ArrayList<Integer> numbers)
     {
-        return 0;
+        //ArrayList <Integer> sumofnumbers= new ArrayList<>();
+        int sumofnumbers = 0;
+        for (int number : numbers) {
+            sumofnumbers = number + sumofnumbers;
+
+
+        }
+
+
+        return sumofnumbers;
+
     }
 
     /*
@@ -64,10 +74,20 @@ public class ArrayListIntro
        sum( [1, 2, 3, 4] )            ->  4
        sum( [21, 98, 78, 5, 6, 8] )   ->  98
      */
-    public int max(ArrayList<Integer> numbers)
-    {
-        return 0;
-    }
+
+        public int max(ArrayList<Integer> numbers)
+        {
+            int maxNumber = numbers.getFirst();
+            for (int i= 0; i < numbers.size(); i++) {
+                if (numbers.get(i) > maxNumber) {
+                    maxNumber = numbers.get(i);
+                }
+
+            }
+            return maxNumber;
+        }
+
+
 
     /*
     5. Given a list of integers, return the lowest number
@@ -75,9 +95,18 @@ public class ArrayListIntro
        sum( [1, 2, 3, 4] )            ->  1
        sum( [21, 98, -78, 5, 6, 8] )  ->  -78
      */
-    public int min(ArrayList<Integer> numbers)
-    {
-        return 0;
+
+        public int min(ArrayList <Integer> numbers)
+    {   int minNumber = numbers.getFirst();
+        for (int number : numbers) {
+            if (number < minNumber) {
+                minNumber = number;
+            }
+
+        }
+        return minNumber;
+
+
     }
 
     /*
@@ -89,7 +118,14 @@ public class ArrayListIntro
      */
     public int average(ArrayList<Integer> numbers)
     {
-        return 0;
+        if (numbers == null || numbers.isEmpty()) {}
+        int sumofnumbers = 0;
+        for (int number : numbers) {
+            sumofnumbers += number;
+        }
+        int average = sumofnumbers / numbers.size();
+
+        return average;
     }
 
     /*
