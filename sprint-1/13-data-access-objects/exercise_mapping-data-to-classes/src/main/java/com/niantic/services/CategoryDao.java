@@ -63,9 +63,35 @@ public class CategoryDao
 
     Execute the query, then return a Category object from the results
      */
-    public Category getCategoryById(int categoryId)
+
+     public Category getCategoryById(int userId)
     {
-        return null;
+        Category Category= new Category();
+        String sql = """
+
+        SELECT category_id
+               ,category_name
+               ,description
+
+        FROM    categories
+        WHERE   category_id =?;
+        """;
+        SqlRowSet row = jdbcTemplate.queryForRowSet(sql, userId);
+
+        while(row.next())
+        {
+            int categoryId = row.getInt("category_id");
+            String categoryName = row.getString("category_name");
+            String description = row.getString("description");
+
+            Category.setCategoryId(categoryId);
+            Category.setCategoryName(categoryName);
+            Category.setDescription(description);
+
+        }
+
+        // return the ArrayList
+        return Category;
     }
 
     /*
@@ -75,6 +101,13 @@ public class CategoryDao
      */
     public void addCategory(Category category)
     {
+
+
+
+
+
+
+
     }
 
     /*
