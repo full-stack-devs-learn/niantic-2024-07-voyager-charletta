@@ -51,18 +51,23 @@ public class Main
         // Variable name: name
         // Data Type: string (names/words are strings)
 
-
+         String name;
+         name = "Charletta";
 
         // 2. Declare a variable to hold your age.
         // Variable name: age
         // Data Type: int (age is a whole number)
 
+          int age;
+          age= 36;
 
 
         // 3. Declare a variable that holds the first 5 digits of PI.
         // Variable name: pi
         // Data Type: double (pi is a number with decimal places)
 
+          double PI;
+          PI = 3.14;
 
 
         // 4. Declare a variable holds the price of
@@ -72,6 +77,12 @@ public class Main
 
         // NOTE: the decimal data type  is not automatically recognized
         // see lecture notes
+
+        double price;
+        price = 16.99;
+
+
+
     }
 
     public static void section02()
@@ -95,6 +106,9 @@ public class Main
         // 5. Declare a variable to store the name of your
         // favorite super hero.
 
+          String favSuperhero;
+          favSuperhero = "Black Panther";
+
         // Hint: You cannot use the same variable name
         // as a variable that you have used before.
 
@@ -105,12 +119,14 @@ public class Main
         // questions and each question is worth 1 point.
         // (You can choose the score)
 
-
+             int value;
+             value= "(98)";
 
         // 7. Declare a variable that holds the current
         // population in the United States.
         // (search what the population is today)
 
+            
 
 
         // 8. Declare a variable that holds the current
