@@ -67,7 +67,7 @@ public class Main
         // Data Type: double (pi is a number with decimal places)
 
           double PI;
-          PI = 3.14;
+          PI = 3.14159;
 
 
         // 4. Declare a variable holds the price of
@@ -119,19 +119,22 @@ public class Main
         // questions and each question is worth 1 point.
         // (You can choose the score)
 
-             int value;
-             value= "(98)";
+             int score;
+             score= 98;
 
         // 7. Declare a variable that holds the current
         // population in the United States.
         // (search what the population is today)
 
-            
+             int usPopulation;
+             usPopulation= 333000000;
 
 
         // 8. Declare a variable that holds the current
         // population in China.
         // (search what the population is today)
+             int chinaPopulation;
+             chinaPopulation = 1400000000;
 
 
 
@@ -139,22 +142,34 @@ public class Main
         // population in the world.
         // (search what the population is today)
 
+            long worldPopulation;
+            worldPopulation= 8169382133L;
 
 
         // 10. Declare a variable that specifies whether
         // or not your mouse is wireless.
 
-
+            boolean isWireless;
+            isWireless= true;
 
         // 11. Search what the Latitude and Longitude of your
         // home town are. Then declare 2 variables
         // to store the Latitude and Longitude.
 
+            double latitude;
+            latitude=37.8044;
+
+            double longitude;
+            longitude = 122.2712;
 
 
         // 12. Create a variable that holds the current
         // Microsoft stock price.
+
+            double microsoftStock;
+            microsoftStock=406.02;
     }
+
     
     public static void section03()
     {
@@ -191,20 +206,40 @@ public class Main
 
         // How many shots did Pete take?
 
+            int totalShots;
+            int madeShots;
+            madeShots=7;
+            int missedShots;
+            missedShots=3;
 
+            totalShots=madeShots + missedShots;
 
         // 14. In his previous basketball game Pete took 20 shots.
         // He missed 6 shots, and he made 3 three point shots.
 
         // How many 2 point shots did Pete make?\
 
+            int peteShots;
+            peteShots=20;
+            int shotsMissed;
+            shotsMissed=6;
+            int threePoint;
+            threePoint=3;
+            int twoPoint;
 
+            twoPoint= peteShots - shotsMissed -threePoint;
 
         // 15. Pete and Pat are teammates. Pete made 6 shots.
         // Pat made twice as many shots as Pete.
 
         // How many total shots did they make?
 
+           int peteMade;
+           peteMade=6;
+           int patMade;
+           patMade = peteMade * 2;
+           int bothShots;
+           bothShots= peteMade + patMade;
 
 
         // 16. Pete has made 13 shots, Pat has made 9.
@@ -212,12 +247,27 @@ public class Main
         // before the game ends, how many total shots
         // did the Terrifying Twosome make in the game?
 
+            int gameDay;
+            int peteHit;
+            peteHit = 13;
+            peteHit +=1;
+            int patHit;
+            patHit = 9;
+            patHit+=1;
 
+            gameDay= peteHit + patHit;
 
         // 17. In his last game Pete made 11 shots.
-        // he missed 4 shots.
+        // he missed 4 shots. // What percentage of his shots did he make?
 
-        // What percentage of his shots did he make?
+            double shotsPete;
+            shotsPete=11;
+            double missedPete;
+            missedPete=4;
+            double totalValue;
+            totalValue= shotsPete + missedPete;
+
+             double percent= (shotsPete/totalValue)/100;
 
 
 
@@ -226,11 +276,22 @@ public class Main
         // shots in their next game. Together they make 70%
         // of their 3 point shots.
 
+
         // The team that they are playing scores 31 points a game.
 
         // How many shots do Pete and Pat have to take to win
         // this game?
-    }
+
+          double shotPercent;
+          shotPercent=0.70;
+
+          int opponentScore;
+          opponentScore= 31;
+
+          int totalToWin;
+          totalToWin= opponentScore +=1;
+
+
     
     public static void clairesCookies()
     {
