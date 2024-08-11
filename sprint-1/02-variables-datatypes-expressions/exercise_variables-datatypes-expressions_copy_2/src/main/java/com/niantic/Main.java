@@ -54,12 +54,22 @@ public class Main
          String name;
          name = "Charletta";
 
+        System.out.println("1) NAME");
+        System.out.println("NAME: " + name);
+        System.out.println();
+
+
+
         // 2. Declare a variable to hold your age.
         // Variable name: age
         // Data Type: int (age is a whole number)
 
           int age;
           age= 36;
+
+        System.out.println("2 Age");
+        System.out.println("age: " + age);
+        System.out.println();
 
 
         // 3. Declare a variable that holds the first 5 digits of PI.
@@ -68,6 +78,10 @@ public class Main
 
           double PI;
           PI = 3.14159;
+
+          System.out.println("3) PI");
+          System.out.println("PI: "+PI);
+          System.out.println();
 
 
         // 4. Declare a variable holds the price of
@@ -81,7 +95,9 @@ public class Main
         double price;
         price = 16.99;
 
-
+       System.out.println("4) Price");
+       System.out.println("price: Price");
+       System.out.println();
 
     }
 
@@ -109,6 +125,11 @@ public class Main
           String favSuperhero;
           favSuperhero = "Black Panther";
 
+        System.out.println("5) FavSuperhero");
+        System.out.println("favSuperhero: favSuperhero");
+        System.out.println();
+
+
         // Hint: You cannot use the same variable name
         // as a variable that you have used before.
 
@@ -121,6 +142,11 @@ public class Main
 
              int score;
              score= 98;
+
+        System.out.println("6) Score");
+        System.out.println("score: Score");
+        System.out.println();
+
 
         // 7. Declare a variable that holds the current
         // population in the United States.
@@ -293,8 +319,9 @@ public class Main
 
 
     
-    public static void clairesCookies()
-    {
+        public static void clairesCookies()
+    }
+
 
         System.out.println();
         System.out.println();
@@ -313,6 +340,21 @@ public class Main
         // receive? (Students can only receive whole cookies)
 
 
+          int claireCookies;
+          claireCookies = 12;
+          int students;
+          students = 14;
+          int dozenCookies;
+          dozenCookies= 3;
+
+          int totalCookies;
+          totalCookies = dozenCookies * claireCookies;
+          int cookieEachStudent;
+          int cookiesEachStudent= totalCookies/students;
+
+
+
+
 
         // 20. Sean has 14 students in his class.
         // He has bought 3 dozen cookies for his class.
@@ -320,6 +362,13 @@ public class Main
         // Sean wants to divide the cookies evenly between
         // his students. After giving the students their
         // cookies, how many cookies will be left over?
+
+            int studentsInClass;
+            studentsInClass=14;
+            int cookiesBought;
+            cookiesBought=36;
+
+
 
 
 
