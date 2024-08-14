@@ -11,8 +11,24 @@ public class Exercises
      */
     public String[] daysOfTheWeek()
     {
-        return null;
+        String[] arrayString = new String[7];
+
+        arrayString[0]="Sunday";
+        arrayString[1]="Monday";
+        arrayString[2]="Tuesday";
+        arrayString[3]="Wednesday";
+        arrayString[4]="Thursday";
+        arrayString[5]="Friday";
+        arrayString[6]="Saturday";
+
+
+
+
+        return arrayString;
     }
+
+
+
 
     /*
      * 2)
@@ -23,7 +39,29 @@ public class Exercises
      */
     public String[] monthsOfTheYear()
     {
-        return null;
+        String[] arrayString = new String[12];
+
+        arrayString[0]="January";
+        arrayString[1]="February";
+        arrayString[2]="March";
+        arrayString[3]="April";
+        arrayString[4]="May";
+        arrayString[5]="June";
+        arrayString[6]="July";
+        arrayString[7]="August";
+        arrayString[8]="September";
+        arrayString[9]="October";
+        arrayString[10]="November";
+        arrayString[11]="December";
+
+
+
+
+
+        return arrayString;
+
+
+
     }
 
     /*
@@ -38,7 +76,17 @@ public class Exercises
      */
     public int[] oneToFifty()
     {
-        return null;
+        int[] numbers = new int[50];
+
+
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;
+
+
+
+
+
+        return ;
     }
 
     /*
