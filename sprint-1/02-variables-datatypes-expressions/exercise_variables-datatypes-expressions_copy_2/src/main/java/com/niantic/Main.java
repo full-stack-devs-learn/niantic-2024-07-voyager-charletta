@@ -80,7 +80,7 @@ public class Main
           PI = 3.14159;
 
           System.out.println("3) PI");
-          System.out.println("PI: "+PI);
+          System.out.println("PI:" +PI);
           System.out.println();
 
 
@@ -96,7 +96,7 @@ public class Main
         price = 16.99;
 
        System.out.println("4) Price");
-       System.out.println("price: Price");
+       System.out.println("price:" +price);
        System.out.println();
 
     }
@@ -126,7 +126,7 @@ public class Main
           favSuperhero = "Black Panther";
 
         System.out.println("5) FavSuperhero");
-        System.out.println("favSuperhero: favSuperhero");
+        System.out.println("favSuperhero:" +favSuperhero);
         System.out.println();
 
 
@@ -144,7 +144,7 @@ public class Main
              score= 98;
 
         System.out.println("6) Score");
-        System.out.println("score: Score");
+        System.out.println("Score:" +score);
         System.out.println();
 
 
@@ -155,6 +155,10 @@ public class Main
              int usPopulation;
              usPopulation= 333000000;
 
+        System.out.println("7) usPopulation");
+        System.out.println("usPopulation:" +usPopulation);
+        System.out.println();
+
 
         // 8. Declare a variable that holds the current
         // population in China.
@@ -162,6 +166,9 @@ public class Main
              int chinaPopulation;
              chinaPopulation = 1400000000;
 
+        System.out.println("8) chinaPopulation");
+        System.out.println("chinaPopulation:" +chinaPopulation);
+        System.out.println();
 
 
         // 9. Declare a variable that holds the current
@@ -171,12 +178,20 @@ public class Main
             long worldPopulation;
             worldPopulation= 8169382133L;
 
+        System.out.println("9) worldPopulation");
+        System.out.println("worldPopulation:" +worldPopulation);
+        System.out.println();
+
 
         // 10. Declare a variable that specifies whether
         // or not your mouse is wireless.
 
             boolean isWireless;
             isWireless= true;
+
+        System.out.println("10) boolean isWireless");
+        System.out.println("isWireless:" +isWireless);
+        System.out.println();
 
         // 11. Search what the Latitude and Longitude of your
         // home town are. Then declare 2 variables
@@ -188,12 +203,21 @@ public class Main
             double longitude;
             longitude = 122.2712;
 
+        System.out.println("11) Latitude");
+        System.out.println("latitude:" +latitude);
+        System.out.println();
+
 
         // 12. Create a variable that holds the current
         // Microsoft stock price.
 
             double microsoftStock;
             microsoftStock=406.02;
+
+        System.out.println("12) microsoftStock");
+        System.out.println("microsoftStock:" +microsoftStock);
+        System.out.println();
+
     }
 
     
@@ -239,6 +263,14 @@ public class Main
 
         totalShots = madeShots + missedShots;
 
+        System.out.println("13) totalShots");
+        System.out.println("totalShots:" +totalShots);
+        System.out.println();
+
+
+
+
+
         // 14. In his previous basketball game Pete took 20 shots.
         // He missed 6 shots, and he made 3 three point shots.
 
@@ -254,8 +286,14 @@ public class Main
 
         twoPoint = peteShots - shotsMissed - threePoint;
 
+        System.out.println("14) twoPoint");
+        System.out.println("twoPoint:" +twoPoint);
+        System.out.println();
+
+
         // 15. Pete and Pat are teammates. Pete made 6 shots.
         // Pat made twice as many shots as Pete.
+
 
         // How many total shots did they make?
 
@@ -265,6 +303,11 @@ public class Main
         patMade = peteMade * 2;
         int bothShots;
         bothShots = peteMade + patMade;
+
+        System.out.println("15) bothShots");
+        System.out.println("bothShots:" +bothShots);
+        System.out.println();
+
 
 
         // 16. Pete has made 13 shots, Pat has made 9.
@@ -282,6 +325,11 @@ public class Main
 
         gameDay = peteHit + patHit;
 
+        System.out.println("16) gameDay");
+        System.out.println("gameDay:" +gameDay);
+        System.out.println();
+
+
         // 17. In his last game Pete made 11 shots.
         // he missed 4 shots. // What percentage of his shots did he make?
 
@@ -293,6 +341,11 @@ public class Main
         totalValue = shotsPete + missedPete;
 
         double percent = (shotsPete / totalValue) * 100;
+
+        System.out.println("17) Percent");
+        System.out.println("Percent:" + percent);
+        System.out.println();
+
 
 
         // 18. Pete and Pat have decided to only take 3 point
@@ -313,7 +366,15 @@ public class Main
 
         int totalToWin;
         totalToWin = opponentScore += 1;
+
+
+        System.out.println("18) totalToWin");
+        System.out.println("totalToWin:" + totalToWin);
+        System.out.println();
     }
+
+
+
 
         public static void clairesCookies()
         {
@@ -351,6 +412,9 @@ public class Main
           int cookiesEachStudent= totalCookies/students;
 
 
+            System.out.println("19) cookiesEachStudent");
+            System.out.println("cookiesEachStudent:" + cookiesEachStudent);
+            System.out.println();
 
 
 
@@ -369,12 +433,20 @@ public class Main
             int leftOverCookies = cookiesBought % studentsInClass;
 
 
+            System.out.println("20) leftOverCookies");
+            System.out.println("leftOverCookies:" + leftOverCookies);
+            System.out.println();
 
-        // 21. Sean's class has earned a cookie party.
+
+
+            // 21. Sean's class has earned a cookie party.
 
         // If Sean has 14 students, how many dozen cookies
         // does he need to buy from Claire's Cookies so that
         // each student can receive 3 cookies.
+
+
+
 
 
 
@@ -415,6 +487,9 @@ public class Main
             int Dozens;
             Dozens= totalCookiesToBuy/12;
 
+            System.out.println("22) Dozens");
+            System.out.println("Dozens:" + Dozens);
+            System.out.println();
 
 
 
@@ -429,6 +504,11 @@ public class Main
             double totalCost;
 
             totalCost= claireDozen * seanNeeds;
+
+
+            System.out.println("23) totalCost");
+            System.out.println("totalCost:" + totalCost);
+            System.out.println();
 
 
         // (Use this information for the next several questions)
@@ -458,15 +538,18 @@ public class Main
             frostedChip=18;
 
             int dozenSnicks;
-            dozenSnicks= snickerDoodles/12;
+            dozenSnicks= 12/snickerDoodles;
             int dozenChocChips;
-            dozenChocChips=chocolateChip/12;
+            dozenChocChips=12/chocolateChip;
             int dozenFrosted;
-            dozenFrosted= frostedChip/12;
+            dozenFrosted= 12/frostedChip;
 
             int totalDozenCookies;
             totalDozenCookies= dozenSnicks + dozenChocChips + dozenFrosted;
 
+            System.out.println("24) totalDozenCookies");
+            System.out.println("totalDozenCookies:" + totalDozenCookies);
+            System.out.println();
 
 
 
@@ -489,6 +572,10 @@ public class Main
            double totalOrderCost;
            totalOrderCost= orderPriceSnick + orderChoc+ orderFrost;
 
+            System.out.println("25) totalOrderCost");
+            System.out.println("totalOrderCost:" + totalOrderCost);
+            System.out.println();
+
 
 
 
@@ -510,6 +597,17 @@ public class Main
             int frostedLeftover;
             frostedLeftover = Frosted %12;
 
+            System.out.println("26) doodlesLeftover");
+            System.out.println("doodlesLeftover:" + doodlesLeftover);
+            System.out.println();
+
+            System.out.println("26) chipsLeftove");
+            System.out.println("chipsLeftover:" + chipsLeftover);
+            System.out.println();
+
+            System.out.println("26) totalOrderCost");
+            System.out.println("totalOrderCost:" + totalOrderCost);
+            System.out.println();
 
 
         // 27. How much money could Sean have saved if he would
@@ -517,9 +615,6 @@ public class Main
         //              1 dz Chocolate Chip
         //              1 dz Snicker Doodle
     }
-
-            
-
 
 
 

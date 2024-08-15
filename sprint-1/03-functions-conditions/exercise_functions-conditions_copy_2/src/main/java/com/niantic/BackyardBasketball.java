@@ -24,10 +24,12 @@ public class BackyardBasketball
      */
     public int calculateWinningPercentage(int gamesWon, int gamesLost)
     {
-          int gamesWon,
+          int totalGames;
+          totalGames= gamesWon +gamesLost;
 
 
-        return 0;
+
+           return gamesWon*100/totalGames;
     }
 
 
@@ -48,6 +50,11 @@ public class BackyardBasketball
     {
         return 0;
     }
+
+
+
+
+
 
 
     /*

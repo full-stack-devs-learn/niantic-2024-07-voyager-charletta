@@ -57,8 +57,20 @@ public class Exercises
      */
     public String createHtml(String content, String elementName)
     {
-        return null;
+        String htmlString;
+        htmlString = "<";
+        htmlString = htmlString + elementName;
+        htmlString = htmlString + ">";
+        htmlString = htmlString + content;
+        htmlString = htmlString + "</";
+        htmlString = htmlString + elementName;
+        htmlString = htmlString + ">";
+
+
+
+        return htmlString;
     }
+
 
     /*
      * Sometimes Html elements do not have any content
@@ -79,7 +91,27 @@ public class Exercises
      */
     public String moreHtml(String content, String elementName)
     {
-        return null;
+        String htmlString;
+        htmlString = "<";
+        htmlString = htmlString + elementName;
+        htmlString = htmlString + "<";
+        htmlString = htmlString + content;
+        htmlString = htmlString + ">/";
+        htmlString = htmlString + elementName;
+        htmlString = htmlString +"<";
+        htmlString = htmlString + ">";
+        htmlString = htmlString +"</";
+        htmlString = htmlString + '>';
+        htmlString = htmlString + elementName;
+        htmlString = htmlString + content;
+        htmlString = htmlString + elementName;
+
+
+
+        return htmlString;
+
+
+
     }
 
     /*
