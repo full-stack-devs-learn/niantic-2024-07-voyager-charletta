@@ -197,8 +197,7 @@ public class Main
     }
 
     
-    public static void section03()
-    {
+    public static void section03() {
         /******************** Section 3 ********************/
         System.out.println();
         System.out.println("**********************************************");
@@ -232,40 +231,40 @@ public class Main
 
         // How many shots did Pete take?
 
-            int totalShots;
-            int madeShots;
-            madeShots=7;
-            int missedShots;
-            missedShots=3;
+        int totalShots;
+        int madeShots;
+        madeShots = 7;
+        int missedShots;
+        missedShots = 3;
 
-            totalShots=madeShots + missedShots;
+        totalShots = madeShots + missedShots;
 
         // 14. In his previous basketball game Pete took 20 shots.
         // He missed 6 shots, and he made 3 three point shots.
 
         // How many 2 point shots did Pete make?\
 
-            int peteShots;
-            peteShots=20;
-            int shotsMissed;
-            shotsMissed=6;
-            int threePoint;
-            threePoint=3;
-            int twoPoint;
+        int peteShots;
+        peteShots = 20;
+        int shotsMissed;
+        shotsMissed = 6;
+        int threePoint;
+        threePoint = 3;
+        int twoPoint;
 
-            twoPoint= peteShots - shotsMissed -threePoint;
+        twoPoint = peteShots - shotsMissed - threePoint;
 
         // 15. Pete and Pat are teammates. Pete made 6 shots.
         // Pat made twice as many shots as Pete.
 
         // How many total shots did they make?
 
-           int peteMade;
-           peteMade=6;
-           int patMade;
-           patMade = peteMade * 2;
-           int bothShots;
-           bothShots= peteMade + patMade;
+        int peteMade;
+        peteMade = 6;
+        int patMade;
+        patMade = peteMade * 2;
+        int bothShots;
+        bothShots = peteMade + patMade;
 
 
         // 16. Pete has made 13 shots, Pat has made 9.
@@ -273,29 +272,27 @@ public class Main
         // before the game ends, how many total shots
         // did the Terrifying Twosome make in the game?
 
-            int gameDay;
-            int peteHit;
-            peteHit = 13;
-            peteHit +=1;
-            int patHit;
-            patHit = 9;
-            patHit+=1;
+        int gameDay;
+        int peteHit;
+        peteHit = 13;
+        peteHit += 1;
+        int patHit;
+        patHit = 9;
+        patHit += 1;
 
-            gameDay= peteHit + patHit;
+        gameDay = peteHit + patHit;
 
         // 17. In his last game Pete made 11 shots.
         // he missed 4 shots. // What percentage of his shots did he make?
 
-            double shotsPete;
-            shotsPete=11;
-            double missedPete;
-            missedPete=4;
-            double totalValue;
-            totalValue= shotsPete + missedPete;
+        double shotsPete;
+        shotsPete = 11;
+        double missedPete;
+        missedPete = 4;
+        double totalValue;
+        totalValue = shotsPete + missedPete;
 
-             double percent= (shotsPete/totalValue)/100;
-
-
+        double percent = (shotsPete / totalValue) * 100;
 
 
         // 18. Pete and Pat have decided to only take 3 point
@@ -308,19 +305,19 @@ public class Main
         // How many shots do Pete and Pat have to take to win
         // this game?
 
-          double shotPercent;
-          shotPercent=0.70;
+        double shotPercent;
+        shotPercent = 0.70;
 
-          int opponentScore;
-          opponentScore= 31;
+        int opponentScore;
+        opponentScore = 31;
 
-          int totalToWin;
-          totalToWin= opponentScore +=1;
-
-
-    
-        public static void clairesCookies()
+        int totalToWin;
+        totalToWin = opponentScore += 1;
     }
+
+        public static void clairesCookies()
+        {
+
 
 
         System.out.println();
@@ -347,6 +344,7 @@ public class Main
           int dozenCookies;
           dozenCookies= 3;
 
+
           int totalCookies;
           totalCookies = dozenCookies * claireCookies;
           int cookieEachStudent;
@@ -368,7 +366,7 @@ public class Main
             int cookiesBought;
             cookiesBought=36;
 
-
+            int leftOverCookies = cookiesBought % studentsInClass;
 
 
 
@@ -396,11 +394,41 @@ public class Main
 
         // How many dozen cookies does Sean need to buy.
 
+              int students4Cookies;
+              students4Cookies=2;
+             int students3Cookies;
+             students3Cookies=4;
+             int totalStudents;
+             totalStudents=14;
+             int student2Cookies;
+             student2Cookies=totalStudents-students4Cookies-students3Cookies;
+
+            int grade100;
+            grade100=4 * students4Cookies;
+            int grade90;
+            grade90=3 * students3Cookies;
+            int everyoneElse;
+            everyoneElse=2 * student2Cookies;
+
+            int totalCookiesToBuy;
+            totalCookiesToBuy= grade100 + grade90+ everyoneElse;
+            int Dozens;
+            Dozens= totalCookiesToBuy/12;
+
+
+
 
 
         // 23. If Claire's Cookies sells each dozen cookies for 12.99,
         // how much will it cost Sean to buy 4 dozen cookies.
 
+            double claireDozen;
+            claireDozen=12.99;
+            double seanNeeds;
+            seanNeeds=4;
+            double totalCost;
+
+            totalCost= claireDozen * seanNeeds;
 
 
         // (Use this information for the next several questions)
@@ -422,14 +450,65 @@ public class Main
 
         // 24. How many total dozen cookies does Sean need to buy?
 
+            int snickerDoodles;
+            snickerDoodles=9;
+            int chocolateChip;
+            chocolateChip=15;
+            int frostedChip;
+            frostedChip=18;
+
+            int dozenSnicks;
+            dozenSnicks= snickerDoodles/12;
+            int dozenChocChips;
+            dozenChocChips=chocolateChip/12;
+            int dozenFrosted;
+            dozenFrosted= frostedChip/12;
+
+            int totalDozenCookies;
+            totalDozenCookies= dozenSnicks + dozenChocChips + dozenFrosted;
+
+
 
 
         // 25. What is the total cost of this order?
+
+            double snicksCost;
+            snicksCost= 12.99;
+            double chocCost;
+            chocCost=13.99;
+            double frostCost;
+            frostCost=15.99;
+
+            double orderPriceSnick;
+            orderPriceSnick= snicksCost * dozenSnicks;
+            double orderChoc;
+            orderChoc=chocCost * dozenChocChips;
+            double orderFrost;
+            orderFrost= frostCost * dozenFrosted;
+
+           double totalOrderCost;
+           totalOrderCost= orderPriceSnick + orderChoc+ orderFrost;
+
+
 
 
 
         // 26. How many cookies will be left over of each type of cookie?
         // (Snicker Doodles, Chocolate Chip, Frosted Chocolate Chip)
+
+            int Doodles;
+            Doodles =9;
+            int Chips;
+            Chips=15;
+            int Frosted;
+            Frosted=18;
+
+            int doodlesLeftover;
+            doodlesLeftover= Doodles %12;
+            int chipsLeftover;
+            chipsLeftover= Chips %12;
+            int frostedLeftover;
+            frostedLeftover = Frosted %12;
 
 
 
@@ -438,6 +517,12 @@ public class Main
         //              1 dz Chocolate Chip
         //              1 dz Snicker Doodle
     }
+
+            
+
+
+
+
 
 
     // bonus - challenge
