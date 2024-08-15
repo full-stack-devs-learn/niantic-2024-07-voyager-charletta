@@ -21,7 +21,14 @@ public class ClairesCookies
      */
     public double calculateSubtotal(int quantity)
     {
-        return 0;
+          double dozenCookies;
+          dozenCookies=12.95;
+
+          double beforeTax;
+          beforeTax= dozenCookies * quantity;
+
+
+         return beforeTax;
     }
 
     /*
@@ -43,7 +50,24 @@ public class ClairesCookies
      */
     public double calculateTotal(int quantity)
     {
-        return 0;
+
+        double dozenCookies;
+        dozenCookies=12.95;
+
+        double taxRate;
+        taxRate=0.0575;
+
+        double beforeTax;
+        beforeTax= dozenCookies * quantity;
+
+        double withTax;
+        withTax= beforeTax * taxRate;
+
+        double totalCost;
+        totalCost =(beforeTax + withTax) *100 / (100.0);
+
+
+        return totalCost ;
     }
 
     /*
@@ -75,7 +99,39 @@ public class ClairesCookies
      */
     public double calculateQuickOrder(int snickerDozen, int chocolateDozen, int frostedDozen)
     {
-        return 0;
+        double claireSnicker;
+        claireSnicker=12.95;
+
+        double claireChocolate;
+        claireChocolate=13.95;
+
+        double claireFrostedChocolate;
+        claireFrostedChocolate=15.95;
+
+        double TaxRate;
+        TaxRate= 0.0575;
+
+        double beforeTaxSnicker;
+        beforeTaxSnicker= claireSnicker * snickerDozen;
+
+        double beforeTaxChoc;
+        beforeTaxChoc = claireChocolate * chocolateDozen;
+
+        double beforeTaxFrosted;
+        beforeTaxFrosted = claireFrostedChocolate * frostedDozen;
+
+        double orderSubtotal;
+        orderSubtotal= beforeTaxSnicker+ beforeTaxChoc + beforeTaxFrosted;
+
+        double withTax;
+        withTax= (orderSubtotal * TaxRate);
+
+        double totalPrice;
+        totalPrice = orderSubtotal + withTax;
+
+
+
+        return totalPrice;
     }
 
 
@@ -103,7 +159,35 @@ public class ClairesCookies
      */
     public double calculateCustomOrder (int quantity, boolean hasChocolateChips, boolean hasFrosting)
     {
-        return 0;
+         double baseCookie;
+         baseCookie=12.95;
+         double ChocChips;
+         ChocChips=1.00;
+         double Frosting;
+         Frosting=2.00;
+         double addTheTax;
+         addTheTax=0.0575;
+
+           double Order;
+           Order= baseCookie * quantity;
+
+           if (hasChocolateChips) {
+               Order += quantity * ChocChips;
+           }
+           if (hasFrosting) {
+               Order += quantity * Frosting;
+           }
+
+           double orderWithTax;
+           orderWithTax= Order * addTheTax;
+
+           double totalCustomOrder;
+           totalCustomOrder= Order + orderWithTax;
+
+
+
+
+        return totalCustomOrder;
     }
 
 }
