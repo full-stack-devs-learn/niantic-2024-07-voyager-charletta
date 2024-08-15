@@ -95,7 +95,6 @@ public class Exercises
         htmlString = "<";
         htmlString = htmlString + elementName;
         htmlString = htmlString + "<";
-        htmlString = htmlString + content;
         htmlString = htmlString + ">/";
         htmlString = htmlString + elementName;
         htmlString = htmlString +"<";
@@ -103,7 +102,6 @@ public class Exercises
         htmlString = htmlString +"</";
         htmlString = htmlString + '>';
         htmlString = htmlString + elementName;
-        htmlString = htmlString + content;
         htmlString = htmlString + elementName;
 
 

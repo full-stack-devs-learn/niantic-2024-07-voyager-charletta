@@ -48,9 +48,20 @@ public class BackyardBasketball
      */
     public int calculatePointsScored(int shotPercentage, int shotsTaken, boolean isThree)
     {
-        return 0;
-    }
+        //goal calculate points scored
+        //i. calculate the shots landed
+        //ii. see if they are two pointers or three
+        // iii. multiply them together which will tell you
 
+
+        int pointsPerShot = isThree ? 3 : 2;
+
+        double shotsMade = (shotPercentage / 100.0) * shotsTaken;
+        int totalPoints = (int)(pointsPerShot * shotsMade);
+
+        return totalPoints;
+
+    }
 
 
 
@@ -79,6 +90,17 @@ public class BackyardBasketball
      */
     public int calculateShotsRequired(int shotPercentage, int desiredScore, boolean isThree)
     {
-        return 0;
+        int pointsPerShot = isThree ? 3 : 2;
+        int minShotsNeeded = (int)Math.ceil((double) desiredScore / pointsPerShot);
+        double percent = shotPercentage / 100.00;
+        int shotsRequired = (int)Math.ceil(minShotsNeeded/percent);
+        if (shotsRequired * pointsPerShot < desiredScore){
+            shotsRequired++;
+        }
+
+        return shotsRequired;
+
+
+
     }
 }
