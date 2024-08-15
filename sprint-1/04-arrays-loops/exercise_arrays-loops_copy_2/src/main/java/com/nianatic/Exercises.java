@@ -78,16 +78,14 @@ public class Exercises
     {
         int[] numbers = new int[50];
 
-
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = i + 1;
-
+        for (int i = 0; i < 50; i++) {
+            numbers[i] = i + 1;}
 
 
+            return numbers;
 
+        }
 
-        return ;
-    }
 
     /*
      * 4)
@@ -99,10 +97,19 @@ public class Exercises
      *
      * [2, 4, 6, ... 200]
      */
-    public int[] evenNumbers()
-    {
-        return null;
-    }
+
+        public int[] evenNumbers() {
+
+            int[] evenNumbers = new int[100];
+
+            for (int i = 0; i < 100 ; i++) {
+                evenNumbers[i] = (i + 1) * 2;
+
+
+
+            }
+            return evenNumbers;}
+
 
     /*
      * 5)
@@ -123,7 +130,12 @@ public class Exercises
      */
     public String firstDayOfWeek(String[] daysOfTheWeek)
     {
-        return null;
+
+
+
+
+
+        return daysOfTheWeek[0];
     }
 
     /*
@@ -145,7 +157,12 @@ public class Exercises
      */
     public String lastDayOfWeek(String[] daysOfTheWeek)
     {
-        return null;
+
+
+
+        int indexOfLastDay = daysOfTheWeek.length - 1;
+
+        return daysOfTheWeek[indexOfLastDay];
     }
 
     /*
@@ -164,7 +181,10 @@ public class Exercises
      */
     public String monthName(String[] months, int monthNumber)
     {
-        return null;
+
+
+
+       return months [monthNumber -1];
     }
 
     /*
@@ -186,6 +206,13 @@ public class Exercises
      */
     public boolean hasName(String[] names, String nameToFind)
     {
+        for (int i = 0; i < names.length; i++) {
+            if (names[i].equalsIgnoreCase(nameToFind)){
+              return true;
+            }
+        }
+
+
         return false;
     }
 
@@ -207,7 +234,15 @@ public class Exercises
      */
     public int countName(String[] names, String nameToFind)
     {
-        return -1;
+        int counter=0;
+        for (int i = 0; i < names.length; i++) {
+            if (names[i].equalsIgnoreCase(nameToFind)){
+                counter +=1;
+            }
+        }
+
+
+        return counter;
     }
 
     /*
@@ -221,7 +256,15 @@ public class Exercises
      */
     public int sumNumbers(int[] numbers)
     {
-        return -1;
+        int added=0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            added+=numbers[i];
+
+
+        }
+
+        return added ;
     }
 
     /*
@@ -236,7 +279,21 @@ public class Exercises
      */
     public int doubleEvens(int[] numbers)
     {
-        return -1;
+        int added=0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] %2==0){
+                added+=numbers[i];
+            }
+
+
+
+
+        }
+
+
+
+        return added *2;
     }
 
     /*
@@ -251,7 +308,14 @@ public class Exercises
      */
     public int sumEveryThird(int[] numbers)
     {
-        return -1;
+        int added=0;
+
+        for (int i = 0; i < numbers.length; i+=3) {
+            added+=numbers[i];
+
+
+        }
+        return added;
     }
 
     /*
@@ -264,7 +328,15 @@ public class Exercises
      */
     public double averagePrice(double[] prices)
     {
-        return -1;
+       double totalPrice=0;
+
+        for (int i = 0; i < prices.length; i++) {
+            totalPrice +=prices[i];
+        }
+
+
+
+        return totalPrice/prices.length;
     }
 
     /*
@@ -277,7 +349,21 @@ public class Exercises
      */
     public double highestValue(double[] prices)
     {
-        return -1;
+        double highest=prices[0];
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] >highest){
+                highest=prices[i];
+            }
+
+
+        }
+
+
+
+
+
+        return highest;
     }
 
     /*
@@ -294,7 +380,17 @@ public class Exercises
      */
     public double lowestValue(double[] prices)
     {
-        return -1;
+        double lowest= prices[0];
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] <lowest){
+                lowest=prices[i];
+            }
+
+
+        }
+
+        return lowest;
     }
 
 }
