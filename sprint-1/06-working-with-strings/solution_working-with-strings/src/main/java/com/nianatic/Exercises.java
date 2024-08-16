@@ -71,6 +71,15 @@ public class Exercises
      */
     public String moreHtml(String content, String elementName)
     {
+//        if(content == null || content.isEmpty())
+//        {
+//            return "<" + elementName + " />";
+//        }
+//        else
+//        {
+//            return "<" + elementName + ">" + content + "</" + elementName + ">";
+//        }
+
         return (content == null || content.isEmpty())
                 ? String.format("<%s />", elementName)
                 : String.format("<%s>%s</%s>", elementName, content, elementName);

@@ -8,6 +8,10 @@ public class ArrayListIntro
     1. Create an ArrayList of Strings and add the names of your
        5 favorite heroes.
 
+
+
+
+
     Return the list.
      */
     public ArrayList<String> getHeroesList()

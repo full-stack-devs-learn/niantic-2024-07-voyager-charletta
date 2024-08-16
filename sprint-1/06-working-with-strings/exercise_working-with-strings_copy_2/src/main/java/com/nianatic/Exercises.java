@@ -91,22 +91,16 @@ public class Exercises
      */
     public String moreHtml(String content, String elementName)
     {
-        String htmlString;
-        htmlString = "<";
-        htmlString = htmlString + elementName;
-        htmlString = htmlString + "<";
-        htmlString = htmlString + ">/";
-        htmlString = htmlString + elementName;
-        htmlString = htmlString +"<";
-        htmlString = htmlString + ">";
-        htmlString = htmlString +"</";
-        htmlString = htmlString + '>';
-        htmlString = htmlString + elementName;
-        htmlString = htmlString + elementName;
 
 
-
-        return htmlString;
+        if(content == null || content.isEmpty())
+        {
+            return "<" + elementName + " />";
+        }
+        else
+        {
+            return "<" + elementName + ">" + content + "</" + elementName + ">";
+        }
 
 
 
@@ -132,7 +126,20 @@ public class Exercises
      */
     public String createXml(int id, String name)
     {
-        return  null;
+        String xmlString;
+
+        xmlString = "<customer>";
+        xmlString += "<id>" + id +"</id>";
+        xmlString += "<name>" + name + "</name>";
+        xmlString += "</customer>";
+
+
+
+
+        return  xmlString;
+
+
+
     }
 
     /*
@@ -169,7 +176,16 @@ public class Exercises
      */
     public String formattedXml(int id, String name)
     {
-        return null;
+
+        String xmlString;
+
+        xmlString = "<customer>\n";
+        xmlString += "  <id>" + id + "</id>\n";
+        xmlString += "  <name>" + name + "</name>\n";
+        xmlString += "</customer>";
+
+        return xmlString;
+
     }
 
     /*
@@ -193,7 +209,20 @@ public class Exercises
      */
     public String formatFullName(String firstName, String middleName, String lastName, String suffix)
     {
-        return  null;
+        String fullName=firstName;
+        if (!middleName.isEmpty())
+        {
+            fullName += " "+middleName;
+        }
+        fullName += " "+lastName;
+        if (!suffix.isEmpty())
+
+        {
+            fullName += ", " + suffix;
+        }
+
+
+        return  fullName;
     }
 
     /*
@@ -224,6 +253,12 @@ public class Exercises
      */
     public String createUserName(String fullName)
     {
+
+
+
+
+
+
         return null;
     }
 }
