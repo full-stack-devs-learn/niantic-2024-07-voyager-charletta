@@ -14,8 +14,21 @@ public class TestScores
      */
     public ArrayList<TestScore> getScoresByTest(ArrayList<TestScore> testScores, String testName)
     {
-        return null;
+        ArrayList<TestScore> filteredScores = new ArrayList<>();
+
+        for (int i = 0; i <testScores.size() ;i++) {
+            TestScore currentTest = testScores.get(i);
+            if (currentTest.getTestName().equalsIgnoreCase(testName))
+            {
+                filteredScores.add(currentTest);
+            }
+        }
+
+
+        return filteredScores;
     }
+
+
 
     /*
     2.  An ArrayList of TestScores contains test results for all students and all of their tests
@@ -24,7 +37,17 @@ public class TestScores
      */
     public ArrayList<TestScore> getScoresByStudent(ArrayList<TestScore> testScores, String student)
     {
-        return null;
+         ArrayList<TestScore> requestedScores =new ArrayList<>();
+
+          for (int i = 0; i < testScores.size(); i++) {
+              TestScore currentTest = testScores.get(i);
+              if (currentTest.getStudentName().equalsIgnoreCase(student)) {
+                  requestedScores.add(currentTest);
+              }
+
+
+          }
+          return requestedScores;
     }
 
     /*
@@ -33,14 +56,30 @@ public class TestScores
      */
     public int getHighestScore(ArrayList<TestScore> testScores)
     {
-        return 0;
+        ArrayList<TestScore> highestScore =new ArrayList<>();
+
+
+        for (TestScore testScore : testScores) {
+            if (testScore.getScore() > getHighestScore()) {
+                highestScore = testScore.getScore();
+            }
+        }
+
+
+
+
+
+
+          return getHighestScore();
     }
+
 
     /*
     4.  An ArrayList of TestScores contains test results for all students and all of their tests
         Given an input of All testScores return the lowest score.
      */
-    public int getLowestScore(ArrayList<TestScore> testScores)
+
+            public int getLowestScore(ArrayList<TestScore> testScores)
     {
         return 0;
     }
@@ -51,6 +90,9 @@ public class TestScores
      */
     public int getAverageScore(ArrayList<TestScore> testScores)
     {
+
+
+
         return 0;
     }
 

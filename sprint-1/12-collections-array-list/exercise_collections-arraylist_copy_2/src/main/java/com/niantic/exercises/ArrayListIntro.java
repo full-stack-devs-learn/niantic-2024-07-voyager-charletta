@@ -9,9 +9,6 @@ public class ArrayListIntro
        5 favorite heroes.
 
 
-
-
-
     Return the list.
      */
     public ArrayList<String> getHeroesList()
