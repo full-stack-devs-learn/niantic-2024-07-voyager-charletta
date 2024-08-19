@@ -58,19 +58,8 @@ public class TestScores
     {
         ArrayList<TestScore> highestScore =new ArrayList<>();
 
+        return 0;
 
-        for (TestScore testScore : testScores) {
-            if (testScore.getScore() > getHighestScore()) {
-                highestScore = testScore.getScore();
-            }
-        }
-
-
-
-
-
-
-          return getHighestScore();
     }
 
 
