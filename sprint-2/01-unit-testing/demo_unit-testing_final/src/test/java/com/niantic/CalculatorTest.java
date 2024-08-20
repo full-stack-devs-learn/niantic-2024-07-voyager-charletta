@@ -23,7 +23,7 @@ class CalculatorTest
         Calculator calculator = new Calculator();
         int firstNumber = 10;
         int secondNumber = 3;
-        double expected = 13;
+        double expected;
 
         // act
         double actual = calculator.add(firstNumber,secondNumber);

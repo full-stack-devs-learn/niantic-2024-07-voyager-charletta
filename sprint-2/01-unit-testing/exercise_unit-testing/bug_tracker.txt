@@ -5,10 +5,12 @@ Class: Rectangle
     Bug 1:
 
         Describe the bug/error:
+        org.opentest4j.AssertionFailedError: Because it should have calculated 10 * 3 ==> expected: <30> but was: <15>
 
         Where was the bug? (function, line number)
-
+        line 4
         What test helped you find the bug?
+        the bug is on
 
         What did you do to fix the bug?
 
