@@ -16,7 +16,7 @@ public class TestScores
     {
 
 
-        return null;
+       return null;
     }
 
     /*
@@ -26,7 +26,11 @@ public class TestScores
      */
     public ArrayList<TestScore> getScoresByStudent(ArrayList<TestScore> testScores, String student)
     {
+
+
+
         return null;
+
     }
 
     /*
@@ -35,25 +39,38 @@ public class TestScores
      */
     public int getHighestScore(ArrayList<TestScore> testScores)
     {
-        return 0;
+
+
+
+
+        return null;
     }
 
     /*
     4.  An ArrayList of TestScores contains test results for all students and all of their tests
         Given an input of All testScores return the lowest score.
      */
+
     public int getLowestScore(ArrayList<TestScore> testScores)
     {
-        return 0;
+
+
+
+        return null;
     }
 
     /*
     5.  An ArrayList of TestScores contains test results for all students and all of their tests
-        Given an input of All testScores return the lowest score.
+        Given an input of All testScores return the average score.
      */
     public int getAverageScore(ArrayList<TestScore> testScores)
     {
-        return 0;
+
+
+        return null;
+
+
+
     }
 
     /*
@@ -62,7 +79,10 @@ public class TestScores
      */
     public int getHighestScoreByTest(ArrayList<TestScore> testScores, String testName)
     {
-        return 0;
+
+
+
+        return null;
     }
 
     /*
@@ -71,7 +91,11 @@ public class TestScores
      */
     public int getLowestScoreByTest(ArrayList<TestScore> testScores, String testName)
     {
-        return 0;
+
+
+
+        return null;
+
     }
 
     /*
@@ -80,7 +104,11 @@ public class TestScores
      */
     public int getAverageScoreByTest(ArrayList<TestScore> testScores, String testName)
     {
-        return 0;
+
+
+
+
+        return null;
     }
 
     /*
@@ -89,24 +117,36 @@ public class TestScores
      */
     public int getHighestScoreByStudent(ArrayList<TestScore> testScores, String student)
     {
-        return 0;
+
+
+
+
+        return null;
     }
 
     /*
     10.  An ArrayList of TestScores contains test results for all students and all of their tests
         Given an input of All testScores return the lowest score for the specified student.
      */
-    public int getLowestScoreByStudent(ArrayList<TestScore> testScores, String student)
-    {
-        return 0;
-    }
+    public int getLowestScoreByStudent(ArrayList<TestScore> testScores, String student) {
+
+        {
+
+
+                return null;
+
+
+        }
 
     /*
     11.  An ArrayList of TestScores contains test results for all students and all of their tests
         Given an input of All testScores return the average score for the specified student.
      */
-    public int getAverageScoreByStudent(ArrayList<TestScore> testScores, String student)
-    {
-        return 0;
-    }
-}
+            public int getAverageScoreByStudent (ArrayList < TestScore > testScores, String student)
+        {
+
+
+
+                return null;
+
+}       }

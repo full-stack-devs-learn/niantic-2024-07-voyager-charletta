@@ -11,9 +11,19 @@ public class ArrayListIntro
 
     Return the list.
      */
+
     public ArrayList<String> getHeroesList()
     {
-        return null;
+        ArrayList<String> heroes = new ArrayList<String>();
+
+        heroes.add("Thor");
+        heroes.add("Madame Webb");
+        heroes.add("Iron Man");
+        heroes.add("Black Widow");
+        heroes.add("Black Panther");
+
+        return heroes;
+
     }
 
     /*
@@ -25,7 +35,16 @@ public class ArrayListIntro
      */
     public ArrayList<Integer> findEvens(ArrayList<Integer> numbers)
     {
-        return null;
+        ArrayList <Integer> evennumbers= new ArrayList<>();
+        for (int number: numbers){
+            if(number % 2 ==0){
+                evennumbers.add(number);
+
+            }
+        }
+
+
+        return evennumbers;
     }
 
     /*
@@ -36,7 +55,16 @@ public class ArrayListIntro
      */
     public int sum(ArrayList<Integer> numbers)
     {
-        return 0;
+        //ArrayList <Integer> sumofnumbers= new ArrayList<>();
+        int sumofnumbers = 0;
+        for (int number : numbers) {
+            sumofnumbers = number + sumofnumbers;
+
+
+        }
+
+        return sumofnumbers;
+
     }
 
     /*
@@ -47,7 +75,14 @@ public class ArrayListIntro
      */
     public int max(ArrayList<Integer> numbers)
     {
-        return 0;
+        int maxNumber = numbers.getFirst();
+        for (int i= 0; i < numbers.size(); i++) {
+            if (numbers.get(i) > maxNumber) {
+                maxNumber = numbers.get(i);
+            }
+
+        }
+        return maxNumber;
     }
 
     /*
@@ -57,8 +92,16 @@ public class ArrayListIntro
        sum( [21, 98, -78, 5, 6, 8] )  ->  -78
      */
     public int min(ArrayList<Integer> numbers)
-    {
-        return 0;
+    {   int minNumber = numbers.getFirst();
+        for (int number : numbers) {
+            if (number < minNumber) {
+                minNumber = number;
+            }
+
+        }
+        return minNumber;
+
+
     }
 
     /*
@@ -70,7 +113,14 @@ public class ArrayListIntro
      */
     public int average(ArrayList<Integer> numbers)
     {
-        return 0;
+        if (numbers == null || numbers.isEmpty()) {}
+        int sumofnumbers = 0;
+        for (int number : numbers) {
+            sumofnumbers += number;
+        }
+        int average = sumofnumbers / numbers.size();
+
+        return average;
     }
 
     /*
@@ -87,8 +137,25 @@ public class ArrayListIntro
 
         Include as many numbers as is specified by the size input
      */
-    public ArrayList<Integer> buildFibonacci(int size)
-    {
-        return null;
+    public ArrayList<Integer> buildFibonacci(int size) {
+        ArrayList<Integer> buildFibonacci = new ArrayList<>();
+
+        if (size <= 0) {
+            return buildFibonacci;
+        }
+
+        buildFibonacci.add(0);
+        if (size > 1) {
+            buildFibonacci.add(1);
+        }
+
+        while (buildFibonacci.size() < size) {
+            int sizeOfList = buildFibonacci.size();
+            int nextValue = buildFibonacci.get(sizeOfList - 1) + buildFibonacci.get(sizeOfList - 2);
+            buildFibonacci.add(nextValue);
+        }
+
+        return buildFibonacci;
     }
+
 }
