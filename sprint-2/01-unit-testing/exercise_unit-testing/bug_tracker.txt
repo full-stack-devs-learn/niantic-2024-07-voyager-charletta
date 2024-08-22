@@ -42,6 +42,7 @@ Class: Quiz
     Bug 1:
 
         Describe the bug/error:
+        opentest4j.AssertionFailedError:  The letter grade received should be A ==> expected: <A> but was: <F>
 
         Where was the bug? (function, line number)
 
