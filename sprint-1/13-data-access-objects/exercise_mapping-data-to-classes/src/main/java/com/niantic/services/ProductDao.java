@@ -30,7 +30,8 @@ public class ProductDao
      */
     public ArrayList<Product> getProductsByCategory(int categoryId)
     {
-        return null;
+        return getProductsByCategory();
+
     }
 
     /*

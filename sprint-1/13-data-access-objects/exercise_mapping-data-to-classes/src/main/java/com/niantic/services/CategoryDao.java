@@ -81,7 +81,7 @@ public class CategoryDao
         while(row.next())
         {
             int categoryId = row.getInt("category_id");
-            String categoryName = row.getString("category_name");
+            String categoryName = row. getString("category_name");
             String description = row.getString("description");
 
             Category.setCategoryId(categoryId);
@@ -101,14 +101,13 @@ public class CategoryDao
      */
     public void addCategory(Category category)
     {
+        String sql = "INSERT INTO category (category_id, category_name) VALUES (?,?);";
 
-
-
-
-
-
-
+        jdbcTemplate.update(sql,
+                category.getCategoryId(),
+                category.getCategoryName());
     }
+
 
     /*
     Write an UPDATE statement -
@@ -117,14 +116,33 @@ public class CategoryDao
      */
     public void updateCategory(Category category)
     {
+        String sql = """
+                UPDATE category
+                SET category_id = ?
+                	, category_name = ?
+                WHERE category_description = ?;
+                """;
+
+        jdbcTemplate.update(sql,
+                category.getCategoryId(),
+                category.getCategoryName(),
+                category.getDescription()
+        );
+
     }
 
     /*
+
     Write the code to DELETE the category
     with the specified ID
      */
     public void deleteCategory(int categoryId)
     {
+        String sql = "DELETE FROM category WHERE category_id = ?;";
+
+        jdbcTemplate.update(sql, categoryId);
+
+
     }
 
 

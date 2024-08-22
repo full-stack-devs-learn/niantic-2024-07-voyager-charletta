@@ -15,6 +15,10 @@ public class Filters
      */
     public List<LineItem> filterByCompanyName(List<LineItem> lineItems, String companyName)
     {
+        ArrayList=new Array List filteredNames;
+
+
+
         return new ArrayList<>();
     }
 
