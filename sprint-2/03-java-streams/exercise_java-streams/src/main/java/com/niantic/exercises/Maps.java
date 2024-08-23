@@ -4,6 +4,7 @@ import com.niantic.models.LineItem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Maps
 {
@@ -18,7 +19,14 @@ public class Maps
      */
     public List<String> mapCompanyNames(List<LineItem> lineItems)
     {
-        return new ArrayList<>();
+        var companyNames=lineItems.stream()
+                                  .map(lineItem ->lineItem .getCompanyName())
+                                  .distinct()
+                                  .sorted()
+                                  .toList();
+
+
+        return companyNames;
     }
 
     /*
@@ -31,7 +39,14 @@ public class Maps
      */
     public List<String> mapCategories(List<LineItem> lineItems)
     {
-        return new ArrayList<>();
+        var categoryMap=lineItems.stream()
+                                 .map(lineItem -> lineItem .getCategoryName())
+                                 .sorted()
+                                 .distinct()
+                                 .toList();
+
+
+        return categoryMap;
     }
 
     /*
@@ -44,7 +59,15 @@ public class Maps
      */
     public List<String> mapProducts(List<LineItem> lineItems)
     {
-        return new ArrayList<>();
+        var productNameMap=lineItems.stream()
+                                    .map(lineItem -> lineItem .getProductName())
+                                    .sorted()
+                                    .distinct()
+                                    .toList();
+
+
+
+        return productNameMap;
     }
 
     /*
@@ -57,7 +80,15 @@ public class Maps
      */
     public List<String> mapYears(List<LineItem> lineItems)
     {
-        return new ArrayList<>();
+        var MapYears =lineItems.stream()
+                                  .map(lineItem -> String.valueOf(lineItem.getOrderDate().getYear()))
+                                  .distinct()
+                                   .sorted()
+                                   .toList();
+
+
+
+        return MapYears;
     }
 
     /*
@@ -70,6 +101,12 @@ public class Maps
      */
     public List<String> mapOrderIds(List<LineItem> lineItems)
     {
-        return new ArrayList<>();
+        var mapIdOrder =lineItems.stream()
+                                 .map(lineItem -> String.valueOf(lineItem.getOrderId()))
+                                 .distinct()
+                                 .sorted()
+                                 .toList();
+
+        return mapIdOrder;
     }
 }
