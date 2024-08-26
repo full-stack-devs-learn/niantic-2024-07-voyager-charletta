@@ -11,6 +11,8 @@ public class CardGameApplication
 {
     Deck deck = new Deck();
     ArrayList<Player> players = new ArrayList<>();
+    Player winner = new Player("win hand");
+
     
     public void run()
     {

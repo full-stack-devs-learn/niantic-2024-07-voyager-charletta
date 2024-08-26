@@ -1,5 +1,6 @@
 package com.niantic.models;
 
+
 public class Card
 {
     private String color;
@@ -16,7 +17,7 @@ public class Card
         return color;
     }
 
-    public int getValue()
+    public String getValue()
     {
         return number;
     }

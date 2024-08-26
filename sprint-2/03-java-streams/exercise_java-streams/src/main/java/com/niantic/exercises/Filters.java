@@ -15,11 +15,13 @@ public class Filters
      */
     public List<LineItem> filterByCompanyName(List<LineItem> lineItems, String companyName)
     {
-        ArrayList=new Array List filteredNames;
+           var filteredList=lineItems.stream()
+                                     .filter(lineItem ->lineItem.getCompanyName().toLowerCase().contains(companyName.toLowerCase()))
+                                     .toList();
 
 
 
-        return new ArrayList<>();
+        return (filteredList);
     }
 
     /*
@@ -29,7 +31,14 @@ public class Filters
      */
     public List<LineItem> filterByCategory(List<LineItem> lineItems, String categoryName)
     {
-        return new ArrayList<>();
+       var filteredNameList=lineItems.stream()
+                                     .filter(lineItem -> lineItem.getCategoryName().toLowerCase().contains(categoryName.toLowerCase()))
+                                     .toList();
+
+
+
+
+        return (filteredNameList);
     }
 
     /*
@@ -39,7 +48,13 @@ public class Filters
      */
     public List<LineItem> filterByProduct(List<LineItem> lineItems, String productName)
     {
-        return new ArrayList<>();
+           var filteredProductList= lineItems.stream()
+                                             .filter(lineItem -> lineItem.getProductName().toLowerCase().contains(productName.toLowerCase()))
+                                             .toList();
+
+
+
+    return (filteredProductList);
     }
 
     /*
@@ -48,7 +63,14 @@ public class Filters
      */
     public List<LineItem> filterByYear(List<LineItem> lineItems, int year)
     {
-        return new ArrayList<>();
+        var filteredYear=lineItems.stream()
+                                  .filter(lineItem -> lineItem .getOrderDate().getYear() ==year)
+                                  .toList();
+
+
+
+
+        return (filteredYear);
     }
 
 
@@ -58,6 +80,12 @@ public class Filters
      */
     public List<LineItem> filterByOrderId(List<LineItem> lineItems, int orderId)
     {
-        return new ArrayList<>();
+
+        var filteredOrderId = lineItems.stream()
+                                      .filter(lineItem -> lineItem .getOrderId()== orderId)
+                                      .toList();
+
+
+        return filteredOrderId;
     }
 }
