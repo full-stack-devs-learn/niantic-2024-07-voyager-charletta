@@ -1,5 +1,7 @@
 package com.niantic.models;
 
+import java.util.List;
+
 public class Player
 {
     private String name;
@@ -25,6 +27,7 @@ public class Player
     {
         return hand.getPointValue();
     }
+    public List<Card>
 
     public Hand getHand()
     {
