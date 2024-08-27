@@ -10,5 +10,15 @@
 
 -- (78 Rows)
 
-
+SELECT company_name,
+       contact_name,
+       contact_title,
+	   CONCAT(city, CASE WHEN region IS NOT NULL THEN CONCAT(', ', region) 
+                  ELSE '' 
+              END, 
+              ' ', 
+			postal_code) AS city_state_zip
+FROM customers
+WHERE country <> 'USA'
+ORDER BY city_state_zip;
 
