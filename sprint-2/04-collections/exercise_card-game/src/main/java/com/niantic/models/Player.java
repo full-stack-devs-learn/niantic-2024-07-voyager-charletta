@@ -7,6 +7,7 @@ public class Player
     private String name;
     private Hand hand;
 
+
     public Player(String name)
     {
         this.name = name;
@@ -23,14 +24,37 @@ public class Player
         hand.dealTo(card);
     }
 
-    public int getHandValue()
-    {
-        return hand.getPointValue();
-    }
-    public List<Card>
-
-    public Hand getHand()
+    public Hand getHand ()
     {
         return hand;
     }
+
+    public int getHandCardCount()
+    {
+        return hand.getCardCount();
+    }
+
+    public boolean hasCardWithLetter(String letter)
+    {
+        return hand.hasCardWithLetter(letter);
+    }
+    public Card giveCardWithLetter(String letter)
+    {
+        return hand.removeCardWithLetter(letter);
+    }
+    public void checkForMatches()
+    {
+        hand.checkForMatches();
+    }
+    public int getMatchCount() {
+        return hand.getMatchCount();
+    }
+
+    public String displayHand() {
+        return hand.toString();
+    }
+
+
 }
+
+

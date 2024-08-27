@@ -12,14 +12,14 @@ public class Deck
         // build the deck of cards
         cards = new ArrayList<>();
 
-        String[] letters = {"A","B","C","D","E","F","G","H","I","J","K","L"};
-        String[] colors = {"Red ", "Blue ", " Green", "Yellow","Orange", "Purple", "Pink", "White", "Silver","Dark Blue", "Black","Navy"};
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        String[] colors = {"Red", "Blue", "Green", "Yellow"};
 
         for(String color : colors)
         {
-            for(String letter : letters)
+            for(int number : numbers)
             {
-                Card card = new Card(color,letter);
+                Card card = new Card(color,number);
                 cards.add(card);
             }
         }
@@ -34,7 +34,6 @@ public class Deck
     {
         Card card = cards.removeFirst();
         return card;
-
     }
 
     public void shuffle()

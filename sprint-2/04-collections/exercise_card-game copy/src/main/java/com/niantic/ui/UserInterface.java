@@ -13,10 +13,10 @@ public class UserInterface
         System.out.println("-".repeat(30));
         for (Player player : players)
         {
-            System.out.println(player.getName() + ": " + player.displayHand());
+            System.out.println(player.getName() + ": " + player.getHandValue());
             for (Card card : player.getHand().getCards())
             {
-                System.out.println("  " + card.getLetter() + " " + card.getLetter());
+                System.out.println("  " + card.getColor() + " " + card.getValue());
             }
             System.out.println();
         }
