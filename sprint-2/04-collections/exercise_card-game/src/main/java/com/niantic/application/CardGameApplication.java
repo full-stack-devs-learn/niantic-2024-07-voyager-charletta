@@ -16,10 +16,8 @@ public class CardGameApplication
     Player winner = new Player("win hand");
 
     public void run() {
-        addPlayers();
-        dealCards();
-        UserInterface.displayAllPlayersCards(players);
         startGame();
+        UserInterface.displayAllPlayersCards(players);
         playGame();
         determineWinner();
         //UserInterface.displayWinner(winner);
@@ -38,7 +36,7 @@ public class CardGameApplication
 
     private void dealCards() {
         deck.shuffle();
-        {
+
             for (int i = 0; i < 5; i++)
                 for (Player player : players) {
                     Card card = deck.takeCard();
@@ -50,7 +48,7 @@ public class CardGameApplication
                     player.checkForMatches();
                 }
             }
-        }
+
     }
 
     private void playGame() {
@@ -60,10 +58,15 @@ public class CardGameApplication
             UserInterface.displayAllPlayersCards(players);
 
             System.out.println();
-            System.out.print("Card or No Card ? (y/n)");
+            System.out.print("what card do you want ?");
             String response = input.nextLine()
                                    .strip()
                                    .toLowerCase();
+
+            // look in the other players hand for that card
+            // if player2 has that card, remove them from player2's hand
+                // and add them to player1's hand
+            // else say go fish - and player 1 takes a card from the deck
 
             if (response.equalsIgnoreCase("Y"))
             {     // get card from player
@@ -77,6 +80,13 @@ public class CardGameApplication
                     queuedPlayers.offer(player);
                 }
             }
+
+            players.forEach( p -> {
+                if(p.getHand().getCardCount() == 0)
+                {
+                    return; // to get out of the loop
+                }
+            });
         }
     }
         private void determineWinner()
