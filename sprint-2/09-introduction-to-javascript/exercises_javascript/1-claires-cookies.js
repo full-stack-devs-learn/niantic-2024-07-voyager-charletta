@@ -16,7 +16,12 @@
 
 function calculateOrderSubtotal(quantity)
 {
-	return 0;
+	const pricePerDozen= 12.95;
+	const quantity=1;
+	
+	return quantity * pricePerDozen;
+
+	
 }
 
 

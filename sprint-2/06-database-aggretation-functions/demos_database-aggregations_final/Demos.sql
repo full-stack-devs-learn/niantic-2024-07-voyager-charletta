@@ -69,8 +69,6 @@ ORDER BY category_id
 
 
 
-
-
 -- CONCATENATING OUTPUTS
 
 -- Title FirstName LastName from employees table in one column.
