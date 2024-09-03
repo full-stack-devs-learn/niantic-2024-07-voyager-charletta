@@ -17,10 +17,10 @@
 function calculateOrderSubtotal(quantity)
 {
 	const pricePerDozen= 12.95;
-	const quantity=1;
 	
-	return quantity * pricePerDozen;
+	orderSubtotal= quantity * pricePerDozen;
 
+	return parseFloat(orderSubtotal.toFixed(2));
 	
 }
 
@@ -45,7 +45,16 @@ function calculateOrderSubtotal(quantity)
 
 function calculateTax(quantity)
 {
-	return 0;
+	const pricePerDozen= 12.95;
+	const taxRate=0.0575;
+	orderSubtotal= quantity * pricePerDozen;
+	taxAmount= orderSubtotal * taxRate;
+	
+	
+
+return taxAmount = parseFloat(taxAmount.toFixed(2));
+
+
 }
 
 
@@ -68,11 +77,26 @@ function calculateTax(quantity)
 
 */
 
-// create your function here
+function calculateOrderTotal(quantity)
+
+{  
+	const pricePerDozen= 12.95;
+	const taxRate=0.0575;
+	orderSubtotal= quantity * pricePerDozen;
+	taxAmount= orderSubtotal * taxRate;
+	totalAmount = orderSubtotal + taxAmount;
+	
+	
+
+return totalAmount = parseFloat(totalAmount.toFixed(2));
+ 
+
+
+}
 
 
 /*
-3.	With each order Claire needs to generate 
+4.	With each order Claire needs to generate 
 	a receipt to print for the customer
 	and to store for her records.
 
@@ -110,7 +134,22 @@ function calculateTax(quantity)
 
 */
 
-// create your function here
+function placeOrder(customer, quantity) {
+    const pricePerDozen = 12.95;
+    const taxRate = 0.0575;
+
+    let orderSubtotal = quantity * pricePerDozen;
+    let taxAmount = orderSubtotal * taxRate;
+    let totalAmount = orderSubtotal + taxAmount;
+
+    return {
+        customer: customer,
+        quantity: quantity,
+        subtotal: parseFloat(orderSubtotal.toFixed(2)),
+        tax: parseFloat(taxAmount.toFixed(2)),
+        total: parseFloat(totalAmount.toFixed(2))
+    };
+}
 
 
 /*
@@ -132,4 +171,16 @@ function calculateTax(quantity)
 
 */
 
-// create your function here
+//functionhere
+
+function calculateCookiesNeeded(studentsA,studentsB,everyoneElse)
+{ 
+	const totalCookies=(studentsA*4)+ (studentsB*3) + (everyoneElse*2);
+    const dozens= Math.ceil(totalCookies/12);
+
+	return dozens;
+
+
+
+}
+
