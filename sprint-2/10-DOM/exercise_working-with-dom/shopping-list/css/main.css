@@ -3,10 +3,10 @@
     --color-complete: #1c1c1c33;
     --color-med: #979797;
     --color-light: #ffffff;
-    --color-danger: #ff0000;
-    --color-danger-hover: #df0000;
-    --color-warning: rgb(255, 162, 0);
-    --color-success: rgb(140, 187, 41);
+    --color-danger: #e34a4a;
+    --color-danger-hover: #e37878;
+    --color-warning: rgb(224, 254, 203);
+    --color-success: rgb(193, 118, 37);
     --bg-primary: #e2e2e2;
     --bg-primary-light: #ffffff66;
     --bg-danger: #ffdfdf;
@@ -47,19 +47,19 @@ body {
 
 .shopping-list {
     width: 100%;;
-    margin-bottom: 15px;;
+    margin-bottom: 10px;;
 }
 
 .list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    padding: 5px 12px;
     background-color: var(--color-light);
     width: 100%;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;;
+    margin-bottom: 8px;;
 }
 
 .complete {
