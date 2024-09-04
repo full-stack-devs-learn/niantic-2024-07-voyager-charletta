@@ -9,13 +9,13 @@ class ShoppingService {
         return [ 
             {
                 id: 1,
-                title: ' frozen chicken sausage',
+                title: 'Frozen Chicken Sausage Box',
                 quantity: 1,
-                isComplete: false
+                isComplete: true
             },
             {
                 id: 2,
-                title: 'teriyaki seaweed',
+                title: 'Teriyaki Seaweed Pack',
                 quantity: 4,
                 isComplete: true
 
@@ -23,15 +23,15 @@ class ShoppingService {
 
             {   
                 id:3,
-                title:'dino chicken nuggets', 
+                title:'Dino Chicken Nuggets Box', 
                 quantity: 3,
-                isComplete:false
+                isComplete:true
 
             },
     
             {   
                 id:4,
-                title:'blueberry pancakes', 
+                title:'Blueberry Pancakes', 
                 quantity: 2,
                 isComplete:true
 
@@ -39,15 +39,15 @@ class ShoppingService {
 
             {   
                 id:5,
-                title:'bananas', 
+                title:'Bananas', 
                 quantity: 4,
-                isComplete:false
+                isComplete:true
 
             },
 
             {   
                 id:6,
-                title:'oranges', 
+                title:'Oranges', 
                 quantity: 2,
                 isComplete:true
 
@@ -55,15 +55,15 @@ class ShoppingService {
 
             {   
                 id:7,
-                title:'chocolate milk', 
+                title:'Chocolate Milk', 
                 quantity: 1,
-                isComplete:false
+                isComplete:true
 
             },
 
             {   
                 id:8,
-                title:'1lb broccoli', 
+                title:'Pound of Broccoli', 
                 quantity: 1,
                 isComplete:true
 
@@ -71,15 +71,15 @@ class ShoppingService {
 
             {   
                 id:9,
-                title:'string beans', 
+                title:'Pounds of String beans', 
                 quantity: 2,
-                isComplete:false
+                isComplete:true
 
             },
 
             {   
                 id:10,
-                title:'lollipop', 
+                title:'Lollipops', 
                 quantity: 2,
                 isComplete:true
 

@@ -63,8 +63,9 @@ body {
 }
 
 .complete {
-    background-color: var(--bg-primary-light);
+    background-color: var(--bg-primary-dark);
     color: var(--color-complete);
+    text-decoration: line-through;
 }
 
 

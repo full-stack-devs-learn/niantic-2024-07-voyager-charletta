@@ -9,13 +9,13 @@
 
 
 function displayListTitle()
-{         const pageTitle = document.getElementById("syilk's shopping list");
-          pageTitle.textContent = "Page Title"
+{         const pageTitle = document.getElementById("title");
+          pageTitle.textContent = "Syilks Shopping List "
     }
 /**
  * This function will loop over the array of groceries that was set above and add them to the DOM.
  */
-function displayGroceries() 
+function displayShoppingList() 
 {    const service = new ShoppingService();
      const ShoppingList=service.getShoppingList()
                          .sort((left,right) => left.isComplete-right.isComplete)
@@ -26,13 +26,22 @@ function displayGroceries()
                         };
         });
 
-    const groceryListContainer = document.getElementById("groceries"); 
+    const groceryListContainer = document.getElementById("list-container"); 
 
     ShoppingList.forEach(grocery => {
-        createGroceryDiv(grocery, groceryListContainer);
+        createListItem(grocery, groceryListContainer);
     });
 
 
+}
+
+function createListItem( item, parent)
+{
+    const div = document.createElement("div");
+    div.classList.add("list-item")
+    div.textContent = `${item.quantity} (${item.title})`;
+
+    parent.appendChild(div)
 }
 
 
@@ -43,16 +52,19 @@ function displayGroceries()
 function markCompleted()
 {
     
-        const divs = document.querySelectorAll(".groceries.grocery-item");
-    
-        divs.forEach(div => div.ShoppingList.add("completed"));
+        const items = document.querySelectorAll('.list-item');
+        items.forEach(item =>{
+           item.classList.add('complete')
+        });
 
 
 }
 
 document.addEventListener("DOMContentLoaded",() =>{
+    
 
 displayListTitle();
-displayGroceries();
+displayShoppingList();
+
 });
     
