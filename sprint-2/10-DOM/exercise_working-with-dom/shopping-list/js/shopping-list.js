@@ -60,11 +60,15 @@ function markCompleted()
 
 }
 
+
+
 document.addEventListener("DOMContentLoaded",() =>{
     
 
 displayListTitle();
 displayShoppingList();
+
+
 
 });
     

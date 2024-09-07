@@ -39,7 +39,9 @@ function addItemTitle(item, parent)
     div.textContent = item.title;
 
     parent.appendChild(div);
+    
 }
+
 
 function addQuantity(item, parent)
 {
@@ -54,10 +56,9 @@ function addQuantity(item, parent)
 
     div.appendChild(span)
     div.appendChild(text)
+    
 
-    parent.appendChild(div);
-}
-
+    parent.appendChild(div);}
 
 function markCompleted() {
     const listItems = document.querySelectorAll(".list-item");
@@ -67,14 +68,16 @@ function markCompleted() {
     })
 }
 
-
 // create the page load event here
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",() => 
+{
     service = new ShoppingService();
     list = service.getShoppingList();
 
+    
     displayListTitle();
     displayShoppingList();
 });
+
 

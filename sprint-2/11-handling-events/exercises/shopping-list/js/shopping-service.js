@@ -18,6 +18,7 @@ class ShoppingService {
                 quantity: 4,
                 isComplete: false
             }
+
         ];
     }
 }

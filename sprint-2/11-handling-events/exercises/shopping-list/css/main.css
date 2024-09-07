@@ -65,6 +65,7 @@ body {
 .complete {
     background-color: var(--bg-primary-light);
     color: var(--color-complete);
+    text-decoration:line-through
 }
 
 
