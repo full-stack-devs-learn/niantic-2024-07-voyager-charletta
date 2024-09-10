@@ -1,6 +1,7 @@
 let service;
 let list = []
 
+
 let allItemsIncomplete = true;
 
 
@@ -70,14 +71,95 @@ function markCompleted() {
 
 // create the page load event here
 
-document.addEventListener("DOMContentLoaded",() => 
+
+document.addEventListener('DOMContentLoaded', () =>
 {
     service = new ShoppingService();
     list = service.getShoppingList();
 
-    
     displayListTitle();
     displayShoppingList();
+    
+
+    const form = document.querySelector('form');
+    form.addEventListener("submit", (event) => {
+        
+    {
+    event.preventDefault()
+    const newItem = {
+    title: document.getElementById('itemName').value, 
+    quantity: document.getElementById('quantity').value,
+    isComplete: false
+        };
+
+    list.push(newItem); 
+    const parent = document.getElementById("shopping-list");
+    addListItem(newItem, parent);
+
+    form.reset(); 
+    
+        }
+    })     
+    
+    const shoppingList = document.getElementById("shopping-list");
+
+    shoppingList.addEventListener('click', (event) => 
+
+        {
+        const listItem = event.target.closest('.list-item'); 
+
+        if (listItem && !listItem.classList.contains('complete')) {
+            listItem.classList.add('complete');
+
+            const itemTitle = listItem.querySelector('div').textContent; 
+            const item = list.find(i => i.title === itemTitle); 
+            if (item) item.isComplete = true; 
+        }
+    });
+
+    shoppingList.addEventListener('dblclick', (event) => 
+
+        {
+        const listItem = event.target.closest('.list-item'); 
+
+        if (listItem && listItem.classList.contains('complete')) {
+            listItem.classList.remove('complete');
+
+            const itemTitle = listItem.querySelector('div').textContent;
+            const item = list.find(i => i.title === itemTitle); 
+            if (item) item.isComplete = false;  
+        }
+    });
+
+    const toggleButton = document.getElementById('toggleAll');
+    toggleButton.textContent = 'Mark All Complete';
+
+    toggleButton.addEventListener('click', () =>
+         {
+        const listItems = document.querySelectorAll('.list-item');
+
+        if (allItemsIncomplete) {
+            
+            listItems.forEach((item, index) => {
+                item.classList.add('complete');
+                list[index].isComplete = true;
+            });
+            toggleButton.textContent = 'Mark All Incomplete';
+            
+        } else {
+            
+            listItems.forEach((item, index) => {
+                item.classList.remove('complete');
+                list[index].isComplete = false;
+            });
+            toggleButton.textContent = 'Mark All Complete';
+        }
+
+        
+        allItemsIncomplete = !allItemsIncomplete;
+    });
 });
+
+    
 
 
