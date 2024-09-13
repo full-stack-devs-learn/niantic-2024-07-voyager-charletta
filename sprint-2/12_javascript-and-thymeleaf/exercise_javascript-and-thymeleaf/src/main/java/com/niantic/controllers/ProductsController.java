@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class ProductsController
@@ -24,10 +25,26 @@ public class ProductsController
         var category = categoryDao.getCategoryById(catId);
         var categories = categoryDao.getCategories();
 
+
         model.addAttribute("categories", categories);
         model.addAttribute("currentCategory", category);
         model.addAttribute("products", products);
+
         return "products/index";
+    }
+
+    // Display products based on category
+    @GetMapping("/products/category/{categoryId}")
+    public String loadProductPage(Model model, @PathVariable("categoryId") int categoryId) {
+
+        var products = productDao.getProductsByCategory(categoryId);
+        var category = categoryDao.getCategoryById(categoryId);
+        var categories = categoryDao.getCategories();
+
+        model.addAttribute("categories", categories);
+        model.addAttribute("currentCategory", category);
+        model.addAttribute("products", products);
+        return "products/fragments/product-table-list";
     }
 
     // details page
