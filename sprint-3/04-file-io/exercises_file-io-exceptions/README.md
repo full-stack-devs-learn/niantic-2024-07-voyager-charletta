@@ -7,7 +7,7 @@ In this exercise, you will load student data from csv text files.
 After completing this exercise, you'll understand how to:
 
 * Open a file stream to read text files.
-* Work with Exceptions to gracefully handle runtime errlrs
+* Work with Exceptions to gracefully handle runtime errors
 
 ## Evaluation criteria and functional requirements
 

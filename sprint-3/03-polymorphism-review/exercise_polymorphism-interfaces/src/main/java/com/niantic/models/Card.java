@@ -1,7 +1,6 @@
 package com.niantic.models;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Card implements Comparable<Card>
 {
@@ -63,6 +62,14 @@ public class Card implements Comparable<Card>
     public int compareTo(Card o)
     {
         // todo: Exercise 1: implement Comparable<Card>
-        return 0;
+
+        if (!this.suit.equals(o.suit)) {
+            return this.suit.compareTo(o.suit);
+        } else {
+            return Integer.compare(cardValues.get(this.faceValue), cardValues.get(o.faceValue));
+
+        }
+
+
     }
 }
