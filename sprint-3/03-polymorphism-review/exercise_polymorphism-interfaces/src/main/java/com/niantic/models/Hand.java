@@ -1,6 +1,7 @@
 package com.niantic.models;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Hand
 {
@@ -24,6 +25,13 @@ public class Hand
     public void Sort()
     {
         // Todo: Exercise 2: implement this sort method
+
+        Collections.sort(cards);
+        var sortedList = cards.stream()
+                .sorted((card1, card2) -> card1.getSuit().compareTo(card2.getFaceValue()))
+                .toList();
+
+        sortedList.forEach(System.out::println);
 
     }
 

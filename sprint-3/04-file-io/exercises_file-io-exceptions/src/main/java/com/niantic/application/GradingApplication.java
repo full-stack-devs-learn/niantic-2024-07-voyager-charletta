@@ -7,18 +7,15 @@ import com.niantic.ui.UserInput;
 
 import java.nio.file.Files;
 import java.util.List;
+import java.util.Scanner;
 
-public class GradingApplication implements Runnable
-{
+public class GradingApplication implements Runnable {
     private GradesService gradesService = new GradesFileService();
 
-    public void run()
-    {
-        while(true)
-        {
+    public void run() {
+        while (true) {
             int choice = UserInput.homeScreenSelection();
-            switch(choice)
-            {
+            switch (choice) {
                 case 1:
                     displayAllFiles();
                     break;
@@ -43,23 +40,30 @@ public class GradingApplication implements Runnable
         }
     }
 
-    private  void displayAllFiles()
-    {
+    private void displayAllFiles() {
         // todo: 1 - get and display all student file names
 
-        List<Files>filesList= gradesService.getAllFiles();
+        String[] files = gradesService.getFileNames();
 
-        files.forEach(System.out::println);
+        System.out.println();
+        System.out.println("Student File Names");
+        System.out.println("-".repeat(20));
+        for (String file : files) {
 
 
     }
+}
 
     private void displayFileScores()
     {
         // todo: 2 - allow the user to select a file name
         // load all student assignment scores from the file - display all files
 
-        List<FileScores>
+        String[] files = gradesService.getFileNames();
+
+        List<Assignment> assignments = gradesService.getAssignments(selectedFile);
+
+
     }
 
     private void displayStudentAverages()
@@ -82,8 +86,9 @@ public class GradingApplication implements Runnable
         // this one could take some time
     }
 
-    private String parseStudentName(String fileName)
+    private String parseStudentName()
     {
+        String fileName = new String();
         return fileName.replace(".csv", "")
                         .replace("_", " ")
                         .substring(10);
