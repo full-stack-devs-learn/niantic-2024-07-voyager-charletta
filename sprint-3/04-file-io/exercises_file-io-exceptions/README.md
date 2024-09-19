@@ -43,7 +43,7 @@ Display the files on the screen.
 * Display a list of file for the user to choose from
 * Allow the user to select a file
 * Load all assignment data from the file
-* Display the Student name and all assignments ans scores from each file
+* Display the Student name and all assignments and scores from each file
 
 ## 3: Display student statistics
 
