@@ -81,6 +81,7 @@ public class GradingApplication implements Runnable {
         }
         assignments.forEach(System.out::println);
 
+        UserInput.waitForUser();
 
     }
 
@@ -105,17 +106,17 @@ public class GradingApplication implements Runnable {
             System.out.println("=".repeat(40));
 
 
-            double lowScore = assignments.stream()
+            var lowScore = assignments.stream()
                     .mapToDouble(Assignment::getScore)
                     .min()
                     .orElse(0.0);
 
-            double highScore = assignments.stream()
+            var highScore = assignments.stream()
                     .mapToDouble(Assignment::getScore)
                     .max()
                     .orElse(0.0);
 
-            double averageScore = assignments.stream()
+            var averageScore = assignments.stream()
                     .mapToDouble(Assignment::getScore)
                     .average()
                     .orElse(0.0);
@@ -125,6 +126,7 @@ public class GradingApplication implements Runnable {
             System.out.printf("High Score:  %.2f\n", highScore);
             System.out.printf("Average Score:  %.2f\n", averageScore);
 
+            UserInput.waitForUser();
 
         }
         }
