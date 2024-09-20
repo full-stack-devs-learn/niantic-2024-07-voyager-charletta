@@ -42,4 +42,5 @@ public class UserInput
         System.out.print("Press ENTER to continue...");
         in.nextLine();
     }
+
 }

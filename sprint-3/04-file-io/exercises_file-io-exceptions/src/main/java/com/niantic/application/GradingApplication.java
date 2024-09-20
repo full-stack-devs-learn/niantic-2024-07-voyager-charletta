@@ -1,22 +1,34 @@
 package com.niantic.application;
 
+
 import com.niantic.models.Assignment;
+
+
 import com.niantic.services.GradesFileService;
 import com.niantic.services.GradesService;
+import com.niantic.services.ReportService;
 import com.niantic.ui.UserInput;
+
 
 import java.nio.file.Files;
 import java.util.List;
 import java.util.Scanner;
 
-public class GradingApplication implements Runnable {
-    private GradesService gradesService = new GradesFileService();
+public class GradingApplication implements Runnable
+{
+    private final GradesService gradesService= new GradesFileService();
+    private final UserInput ui = new UserInput();
 
-    public void run() {
-        while (true) {
-            try {
-                int choice = UserInput.homeScreenSelection();
-                switch (choice) {
+
+    @Override
+    public void run()
+    {
+        while (true)
+        {
+            int choice = ui.homeScreenSelection();
+
+                switch (choice)
+                {
                     case 1:
                         displayAllFiles();
                         break;
@@ -32,6 +44,9 @@ public class GradingApplication implements Runnable {
                     case 5:
                         displayAssignmentStatistics();
                         break;
+                    case 6:
+                        createStudentSummaryReport();
+                        break;
                     case 0:
                         UserInput.displayMessage("Goodbye");
                         System.exit(0);
@@ -39,35 +54,36 @@ public class GradingApplication implements Runnable {
                         UserInput.displayMessage("Please make a valid selection");
                 }
             }
-            catch(Exception e){}
-        }
+
+
     }
 
-    private void displayAllFiles() {
-        // todo: 1 - get and display all student file names
+}
+private void displayAllFiles()
+{       // todo: 1 - get and display all student file names
 
-        String[] files = gradesService.getFileNames();
 
+        String[] files= gradesFileService.getFileNames();
         System.out.println();
-        System.out.println("Student File Names");
+        System.out.println("Display File Names");
         System.out.println("-".repeat(20));
 
-        for (var file:files){
-            System.out.println(file);
+        UserInput.waitForUser();
+        for (var file:files){System.out.println(file);
         }
 
-        UserInput.waitForUser();
+
 
     }
 
-    private void displayFileScores() {
+private void displayFileScores() {
         // todo: 2 - allow the user to select a file name
         // load all student assignment scores from the file - display all files
 
         String[] files = gradesService.getFileNames();
 
         int choice = UserInput.homeScreenSelection();;
-        String fileSelected= files[choice - 1];
+        String fileSelected= files[choice - 2];
         System.out.println("You selected: " + fileSelected);
 
         List<Assignment> assignments = gradesService.getAssignments(fileSelected);
@@ -85,7 +101,7 @@ public class GradingApplication implements Runnable {
 
     }
 
-    private void displayStudentAverages()
+private void displayStudentAverages()
     {
         // todo: 3 - allow the user to select a file name
         // load all student assignment scores from the file - display student statistics (low score, high score, average score)
@@ -131,7 +147,7 @@ public class GradingApplication implements Runnable {
         }
         }
 
-    private void displayAllStudentStatistics()
+private void displayAllStudentStatistics()
     {
         // todo: 4 - Optional / Challenge - load all scores from all student and all assignments
         // display the statistics for all scores (low score, high score, average score, number of students, number of assignments)
@@ -144,10 +160,30 @@ public class GradingApplication implements Runnable {
         // this one could take some time
     }
 
+   public void createStudentSummaryReport()
+   {
+       String[] files= gradesService.getFileNames();
+       System.out.println();
+       System.out.println("Display File Names");
+       System.out.println("-".repeat(20));
+
+       var assignmentNames = gradesService.getFileNames();
+       var scores = parseStudentName(files.[choice]);
+
+       for (var file:files){System.out.println(file);
+       }
+
+    }
+
     private String parseStudentName() {
         String fileName = new String();
         return fileName.replace(".csv", "")
                 .replace("_", " ")
                 .substring(10);
+
+
     }
+}
+
+public void main() {
 }
