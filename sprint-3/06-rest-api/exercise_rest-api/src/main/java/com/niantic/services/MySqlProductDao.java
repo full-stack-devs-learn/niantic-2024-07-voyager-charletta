@@ -100,7 +100,7 @@ public class MySqlProductDao implements ProductDao
             // Statement.RETURN_GENERATED_KEYS is only used for auto generated ids
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, product.getProductName());
-            statement.setString(2, product.getProductId());
+            statement.setInt(2, product.getProductId());
             return statement;
         }, keyHolder);
 
