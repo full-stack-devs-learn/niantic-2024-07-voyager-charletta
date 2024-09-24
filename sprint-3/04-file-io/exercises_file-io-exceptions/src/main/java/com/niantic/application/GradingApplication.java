@@ -11,6 +11,7 @@ import com.niantic.ui.UserInput;
 
 
 import java.nio.file.Files;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -60,22 +61,16 @@ public class GradingApplication implements Runnable
 
 }
 private void displayAllFiles()
-{       // todo: 1 - get and display all student file names
+{
 
+    List<Files> files = gradesFileService.getAllStudents()
+            .stream()
+            .sorted(Comparator.comparing(Student::getFirstName))
+            .toList();
 
-        String[] files= gradesFileService.getFileNames();
-        System.out.println();
-        System.out.println("Display File Names");
-        System.out.println("-".repeat(20));
+    ui.displayStudents("All Files",files);
 
-        UserInput.waitForUser();
-        for (var file:files){System.out.println(file);
-        }
-
-
-
-    }
-
+}
 private void displayFileScores() {
         // todo: 2 - allow the user to select a file name
         // load all student assignment scores from the file - display all files
